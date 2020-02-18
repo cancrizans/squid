@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700|Noto+Serif&display=swap');
+
+body {
+
+    font-family: 'Noto Serif', serif;
+
+}
+
+.page{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
+
+.maincolumn{
+	max-width: 50%;
+}
+
+.center{
+	display: flex;
+	justify-content: center;
+	margin:2em;
+}
+
+.sidebyside{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+
+
+
+.compact_table{
+	text-align: center;
+
+}
+.compact_table  td {
+  border: 1px solid black;
+}
+
+.compact_table td{
+	padding: 0.5em;
+}
+
+.columlet{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tone{
+	font-size: 2em;
+}
+
+.uniformised_table tr{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.uniformised_table td{
+	flex-grow: 1;
+}
+
+.bigger {
+	font-size: 1.3em;
+}
+
+.hide {
+	border: 0px solid black !important;
+}
+
+.sql {
+	font-weight: 700;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.example{
+	display: flex;
+	flex-direction: column;
+	align-items:  center;
+	margin:1em;
+}
+
+.translation{
+	font-style: italic;
+}
+
+.lexicon{
+	margin-top:2em;
+	margin-bottom: 15em;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.leftcol{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.dictionary{
+	display: flex;
+	flex-direction: column;
+	flex-grow:1;
+}
+
+.word {
+	font-size: 20px;
+}
+
+.lemma{
+	
+	font-weight: 700;
+}
+.details{
+	font-weight: 400;
+}

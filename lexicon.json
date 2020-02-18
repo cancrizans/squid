@@ -1,0 +1,37 @@
+{
+	"gaxa":{
+		"cl":"n",
+		"pr":["F","MASS"],
+		"tr":["water"]
+	},
+	"banta":{
+		"cl":"n",
+		"pr":["F","COLL"],
+		"tr":"persons"
+	},
+	"tsadara":{
+		"cl":"n",
+		"pr":["M","COLL","SET"],
+		"tr":"pairs of eyes"
+	},
+	"dakawasa":{
+		"cl":"n",
+		"pr":["F","COLL"],
+		"tr":"coins"
+	},
+	"wa!aga":{
+		"cl":"n",
+		"pr":["M","MASS"],
+		"tr":"surprise"
+	},
+	"rsachakasa":{
+		"cl":"n",
+		"pr":["M","SING"],
+		"tr":"a sleep, a nap"
+	},
+	"xatsarrnaharrna":{
+		"cl":"v",
+		"pr":["TR"],
+		"tr":"to annoy"
+	}
+}

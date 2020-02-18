@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Squid People Language Lexicon</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="squid.js"></script>
+
+
+	<div class="page">
+
+		<div class="leftcol">
+			 <input type="text" id="search_bar" placeholder="Search...">
+		</div>
+		<div class="dictionary">
+			<template id="word_template">
+				<div class="word">
+					<span class="lemma"></span>
+					<span class="details"></span>
+
+				</div>
+			</template>
+
+		</div>
+
+	</div>
+
+
+
+	<script type="text/javascript">
+		$.ajaxSetup({
+			beforeSend: function(xhr){
+				if (xhr.overrideMimeType)
+					xhr.overrideMimeType("application/json");
+			},
+			error:function() { alert("error");  }
+		});
+
+		var lex;
+
+		$().ready(function(){
+
+			$.getJSON( "lexicon.json", function( data ) {
+				lex = data;
+				onLoadLexicon();
+			});
+		});
+
+
+
+		function onLoadLexicon(){
+
+			var words = Object.keys(lex).sort();
+
+			var templ = $("#word_template").html().trim();
+			var dict = $(".dictionary");
+
+			var divs = {}
+
+			for(let w of words){
+
+				var wd = lex[w];
+
+				wd.ipa = toIPA(w);
+
+				var div = $(templ);
+				div.find(".lemma").text(w);
+				div.find(".details").text(`/${wd.ipa}/ ${wd.cl}., ${wd.pr.join(" ")}, ${wd.tr}`);
+
+				div.appendTo(dict);
+
+				divs[w] = div;
+			}
+
+			var searchBar = $("#search_bar")
+			searchBar.bind("keyup",onSearch);
+
+			function onSearch(){
+				var query = searchBar.val().toLowerCase();
+				
+				for(let w of words){
+					if(w.includes(query))
+						divs[w].show();
+					else
+						divs[w].hide();
+				}
+			}
+		}
+
+
+	</script>
+
+
+</body>
+</html>
