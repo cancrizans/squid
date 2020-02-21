@@ -48,6 +48,12 @@
 		"cl":"n",
 		"pr":["M","SING"],
 		"tr":"arm"
+	},
+
+	"hantawari":{
+		"cl":"n",
+		"pr":["M","COLL","SET"],
+		"tr":"pairs of hands"
 	}
 
 }

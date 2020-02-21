@@ -1,15 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700|Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700|Noto+Serif|Noto+Sans&display=swap');
 
 body {
+    font-family: 'Noto Sans', sans-serif;
+}
 
-    font-family: 'Noto Serif', serif;
-
+h1, h2, h3 {
+	font-family: 'Noto Serif', serif ;
 }
 
 .page{
-	display: flex;
+	width: 100%;
+		display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+}
+
+.container{
+	max-width: 940px;
 
 }
 
@@ -130,6 +137,7 @@ body {
 
 .pronunciation{
 	font-size: 1.1em;
+	 font-family: 'Noto Serif', serif ;
 }
 .conscript{
 	font-size: 1.3em;
