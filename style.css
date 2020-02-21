@@ -87,6 +87,10 @@ body {
 	margin:1em;
 }
 
+.example td{
+	padding-right: 1ex; 
+}
+
 .translation{
 	font-style: italic;
 }
@@ -125,5 +129,13 @@ body {
 }
 
 .pronunciation{
+	font-size: 1.1em;
+}
+.conscript{
 	font-size: 1.3em;
+}
+
+.cmnt {
+	color: red;
+	margin-left: 1ex;
 }

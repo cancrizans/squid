@@ -29,9 +29,25 @@
 		"pr":["M","SING"],
 		"tr":"a sleep, a nap"
 	},
-	"xatsarrnaharrna":{
+	"xatsarrna":{
 		"cl":"v",
 		"pr":["TR"],
 		"tr":"to annoy"
+	},
+	"hanta":{
+		"cl":"n",
+		"pr":["M","SING"],
+		"tr":"sun"
+	},
+	"ntakahaza":{
+		"cl":"v",
+		"pr":["TR"],
+		"tr":"to shout, to scream"
+	},
+	"kanyatsa":{
+		"cl":"n",
+		"pr":["M","SING"],
+		"tr":"arm"
 	}
+
 }

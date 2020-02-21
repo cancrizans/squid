@@ -1,0 +1,1 @@
+magick convert glyphs.png -crop 100x200 pics/tile%03d.png

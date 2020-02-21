@@ -9,6 +9,46 @@ toneSequences = {
 	'J': "˩˥˧˥"
 }
 
+var storage = "⁷ƍꔌꕃꕄ ꗏ ꘟ꘩ꘋꘫꗌ౮ᴛਕ੧ਠ6ㇸヘⲱωᲹᲜᲫᦽ𐒘𐒉߶";
+
+var doublestroke = '\u0348'
+var omeget = '\u032B'
+
+var esssh = '𐒘'
+
+var alphabet = {
+	't':'ਕ',
+	'y':'ꔌ',
+	"rs":"6"+doublestroke,
+	"ts":"#",
+	"ch":"#"+doublestroke,
+	'sh':esssh,
+	'k':'Ʒ',
+	'g':"Ʒ"+doublestroke,	
+	'z':esssh+omeget,
+	's':esssh+doublestroke,
+	'b':'6',
+	'_':'ᴛ',
+	'r':'ω',
+	'n':'ヘ',
+	'm':'ヘ'+doublestroke,
+	'a':""
+}
+
+
+function toScript(text){
+	//should prepend _
+	
+
+	Object.keys(alphabet).forEach(function(key,index){
+		let sub = alphabet[key];
+		//let re = new RegExp(key,'g');
+		//text = text.replace(key,sub);
+		text = text.split(key).join(sub);
+	});
+
+	return text;
+}
 
 function toIPA(text){
 
@@ -41,7 +81,7 @@ function toIPA(text){
 		let tone = m[1];
 
 		if(tone == ""){
-			outwords.push(w);
+			outwords.push(w.replace(/a/g,"ə"));
 			continue;
 		}
 		
