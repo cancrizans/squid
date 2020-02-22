@@ -20,6 +20,33 @@ h1, h2, h3 {
 
 }
 
+.frontpage{
+	width: 100%;
+}
+
+.a4page{
+	width: 100%;
+	padding-top: 141.4%;
+	position: relative;
+}
+
+.a4container{
+	  position: absolute;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+
+
+}
+
+.a4containercentered{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
 .maincolumn{
 	max-width: 50%;
 }
