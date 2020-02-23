@@ -3,8 +3,8 @@ toneSequences = {
 	'L': "˩",
 	'R': "˩˥",
 	'F': "˥˩",
-	'P': "˩˥˩",
-	'D': "˥˩˥",
+	'P': "˩˥˧",
+	'D': "˥˩˧",
 	'T': "˥˩˧˩",
 	'J': "˩˥˧˥"
 }
@@ -58,11 +58,20 @@ function toIPA(text){
 				.replace(/nny/g,"ɲː")
 				.replace(/nn/g,"nː")
 				.replace(/ny/g,"ɲ")
-				.replace(/rrn/g,"ɳː")
+				.replace(/rnn/g,"ɳː")
 				.replace(/rn/g,"ɳ")
+				.replace(/rr/g,"rː")
 				.replace(/rs/g,"ʂ")
+				.replace(/ts/g,"ts")
+				.replace(/trj/g,"ɖʐ")
+				.replace(/rz/g,"ʐ")
+				.replace(/j/g,"dʒ")
+				.replace(/dz/g,"dz")
 				.replace(/sh/g,"ʃ")
+				.replace(/zh/g,"ʒ")
+				.replace(/rcch/g,"ʈːʂ")
 				.replace(/cch/g,"tːʃ")
+				.replace(/rch/g,"ʈʂ")
 				.replace(/ch/g,"tʃ")
 				.replace(/kk/g,"kː")
 				.replace(/gg/g,"gː")
@@ -70,6 +79,7 @@ function toIPA(text){
 				.replace(/dd/g,"dː")
 				.replace(/!!/g,"!ː")
 				.replace(/tts/g,"tːs")
+				.replace(/pp/g,"pː")
 				.replace(/y/g,"j");
 
 	words = text.split(" ");
@@ -85,7 +95,24 @@ function toIPA(text){
 			continue;
 		}
 		
-		let syllables = m[2].trim().split("a").slice(0,-1);
+		let bareword = m[2];
+		let tonification = tonify(bareword,tone);
+
+		let outsyllables = tonification.consonants.map( (s,i) => s+"ə"+tonification.pitches[i] );
+
+		outwords.push(outsyllables.join("."));
+
+	}
+
+
+
+	return outwords.join(" ");
+
+}
+
+function tonify(word,tone){
+
+		let syllables = word.trim().split("a").slice(0,-1);
 
 		let pitches = [...toneSequences[tone]];
 
@@ -117,21 +144,88 @@ function toIPA(text){
 
 		if(syllables.length != pitches.length)
 		{
-			outwords.push("ERROR");
-			continue;
+			console.log("ERROR");
+			
 		}
 
-		let outsyllables = syllables.map( (s,i) => s+"ə"+pitches[i] );
+		return {'consonants':syllables,'pitches':pitches}
+}
 
-		outwords.push(outsyllables.join("."));
+function applyToneRomanise(word,tone){
+	let tonification = tonify(word,tone);
+	let romanisations = tonification.pitches.map(p => p.replace(/˧/,"e")
+										.replace(/˩/,"o")
+										.replace(/˥/,"a")
 
+		);
+
+	romanisations[0] = accent(romanisations[0],tone);
+	return tonification.consonants.map((c,i) => c + romanisations[i]).join("");
+}
+
+function compactRomanise(text){
+	text = text.replace(/rs/g,"ṣ")
+				.replace(/rn/g,"ṇ")
+				.replace(/rz/g,"ẓ");
+	return text;
+}
+
+
+
+nounInflection = {
+	"F": {
+		"ABS":"D",
+		"DOM":"R",
+		"ABL":"F",
+		"TRANS":"L",
+		"IND":"H"
+	},
+	"M": {
+		"ABS":"P",
+		"DOM":"R",
+		"ABL":"L",
+		"TRANS":"L",
+		"IND":"H"
+	}
+}
+
+function getInflectionToneNoun(wgender, wcase){
+	return nounInflection[wgender][wcase];
+}
+
+
+precomposed_accented = {
+	"Fa":"à",
+	"Ra":"á",
+	"Fo":"ò",
+	"Fa":"à",
+	"Ha":"ā",
+	"Da":"ǎ",
+	"Ta":"ȁ",
+	"La":"ȧ",
+	"Ja":"ã",
+	"Pa":"â",
+	"Po":"ô"
+}
+
+function accent(vowel,tone){
+
+	if (tone+vowel in precomposed_accented){
+		return precomposed_accented[tone+vowel];
 	}
 
+	diacritic = {
+		"F":"\u0300",
+		"R":"\u0301",
+		"D":"\u0306",
+		"P":"\u0302",
+		"H":"\u0304",
+		"L":"\u0307",
+		"T":"\u030f",
+		"J":"\u0303"
+	}
 
+	return vowel + diacritic[tone];
 
-
-
-
-	return outwords.join(" ");
 
 }

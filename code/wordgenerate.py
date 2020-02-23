@@ -36,6 +36,33 @@ set_initial = consSet(consonants_base)
 
 set_mediofinal = consSet(consonants_base + consonants_noninitial)
 
+
+
+consonants = {
+	0: [""],
+	1: ["y","w"],
+	2: ["r","rr"],
+	3: ["m","n","rn","ny","mm","nn","rnn","nny"],
+	'3bis':["nt","nts","nch"],
+	4: ["z","zh","rz","x"],
+	5: ["f","s","sh","rs","ts","ch","cz","h","tts","cch","ccz"],
+	6: ["b","d","g"],
+	7: ["p","t","k","pp","tt","kk"]
+}
+
+NUM_CLASSES = 8
+
+def get_consonants(i):
+	return consonants[i]
+
+def get_delta():
+	return random.choices(population = 
+		[-6,-5,-4,-3,-2,-1, 0,+1,+2,+3,+4,+5,+6], weights =
+		[ 8, 6, 4, 2, 1, 1, 0, 1, 1, 2, 4, 6, 8], k=1
+		)[0]
+
+
+
 N = 300
 
 
@@ -51,22 +78,25 @@ words = []
 for i in range(N):
 	l = lengths[i]
 	w = ""
-	last_class = -2
+	
+
+	cclass = random.randrange(0,NUM_CLASSES)
+
 	for j in range(l):
-		if (j==0) and (random.randrange(0,10)<1):
-			cons = ""
-		else:
-			allowed = set_initial if j==0 else set_mediofinal;
 
-			while True:
-				c = random.choices(population = range(len(allowed.classes)), weights = allowed.weights, k=1)[0]
-				if (c!=last_class):
-					break
-			last_class = c
+		allowed = get_consonants(cclass)
 
-			cons = random.choice(allowed.classes[c])
+		c = random.choice(allowed)
 
-		w += cons + "a"
+		w += c + "a"
+
+
+		while True:
+			newclass = cclass + get_delta()
+
+			if((0< newclass) and (newclass<NUM_CLASSES)):
+				cclass = newclass
+				break
 
 	words.append(w)
 

@@ -63,19 +63,27 @@ h1, h2, h3 {
 	justify-content: space-around;
 }
 
+.spacing{
+	margin-left: 1em;
+	margin-right: 1em;
+}
 
 
 
 .compact_table{
 	text-align: center;
+	border-collapse: collapse;
 
 }
-.compact_table  td {
-  border: 1px solid black;
+.compact_table  td, .compact_table th {
+  border: 1px solid #888;
+  	padding: 0.5em;
 }
 
-.compact_table td{
-	padding: 0.5em;
+/*.compact_table tr:nth-child(even) {background-color: #f2f2f2;}*/
+
+.compact_table th {
+	background-color: #c0c0c0;
 }
 
 .columlet{
