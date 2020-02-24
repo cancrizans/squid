@@ -40,11 +40,35 @@ h1, h2, h3 {
 
 }
 
+.warning{
+	max-width: 260px;
+}
+
 .a4containercentered{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.author{
+	display: flex;
+	width: 50%;
+	margin-top:10%;
+	margin-bottom:10%;
+
+	align-items: center;
+}
+
+.authorright{
+	align-self: flex-start;
+}
+.authorleft{
+	align-self: flex-end;
+}
+
+.author img{
+	min-width: 200px;
 }
 
 .maincolumn{
