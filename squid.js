@@ -155,9 +155,12 @@ function tonify(word,tone){
 
 function applyToneRomanise(word,tone){
 	let tonification = tonify(word,tone);
-	let romanisations = tonification.pitches.map(p => p.replace(/˧/,"e")
-										.replace(/˩/,"o")
-										.replace(/˥/,"a")
+	let romanisations = tonification.pitches.map(function(p,i) {
+										if(["w","y","j"].includes(tonification.consonants[i]))
+											return "a";
+
+										return p.replace(/˧/,"e").replace(/˩/,"o").replace(/˥/,"a");
+									}
 
 		);
 

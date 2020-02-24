@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700|Noto+Serif|Noto+Sans&display=swap');
 
+@font-face {
+  font-family: Hatami;
+  src: url(font/hatami.otf);
+}
+
 body {
     font-family: 'Noto Sans', sans-serif;
 }
@@ -199,7 +204,8 @@ h1, h2, h3 {
 	 font-family: 'Noto Serif', serif ;
 }
 .conscript{
-	font-size: 1.3em;
+	font-size: 1.5em;
+	font-family: 'Hatami';
 }
 
 .cmnt {
