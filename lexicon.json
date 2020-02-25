@@ -54,6 +54,23 @@
 		"cl":"n",
 		"pr":["M","COLL","SET"],
 		"tr":"pairs of hands"
-	}
+	},
 
+	"aczakarana":{
+		"cl":"n",
+		"pr":["F","SING"],
+		"tr":"girl, young woman"
+	},
+
+	"ntaracha":{
+		"cl":"n",
+		"pr":["M","SING"],
+		"tr":"house"
+	},
+
+	"hattsana":{
+		"cl":"n",
+		"pr":["M","COLL"],
+		"tr":"cats"
+	}
 }
