@@ -1,6 +1,6 @@
 toneSequences = {
-	'H': "˥",
-	'L': "˩",
+	'H': "˥˥",
+	'L': "˩˩",
 	'R': "˩˥",
 	'F': "˥˩",
 	'P': "˩˥˧",
@@ -88,19 +88,21 @@ function toIPA(text){
 
 	outwords = [];
 
+	V = "ə"
+
 	for (let w of words){
 		let m = w.match(/^((?:H|L|R|F|P|D|J|T)?)(.*)$/);
 		let tone = m[1];
 
 		if(tone == ""){
-			outwords.push(w.replace(/a/g,"ə"));
+			outwords.push(w.replace(/a/g,V));
 			continue;
 		}
 		
 		let bareword = m[2];
 		let tonification = tonify(bareword,tone);
 
-		let outsyllables = tonification.consonants.map( (s,i) => s+"ə"+tonification.pitches[i] );
+		let outsyllables = tonification.consonants.map( (s,i) => s+V+tonification.pitches[i] );
 
 		outwords.push(outsyllables.join("."));
 
@@ -108,7 +110,7 @@ function toIPA(text){
 
 
 
-	return outwords.join(" ");
+	return outwords.join("  ");
 
 }
 

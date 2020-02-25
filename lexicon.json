@@ -72,5 +72,47 @@
 		"cl":"n",
 		"pr":["M","COLL"],
 		"tr":"cats"
+	},
+
+	"chatsara":{
+		"cl":"adj",
+		"pr":[],
+		"tr":"tall"
+	},
+
+	"samagasha":{
+		"cl":"adj",
+		"pr":[],
+		"tr":"short (not tall)"
+	},
+
+	"panacza":{
+		"cl":"n",
+		"pr":["M","SING"],
+		"tr":"man (male adult)"
+	},
+
+	"garattacha":{
+		"cl":"n",
+		"pr":["M","SING"],
+		"tr":"woman, especially older"
+	},
+
+	"tanaba":{
+		"cl":"n",
+		"pr":["F","COLL"],
+		"tr":"fishes"
+	},
+
+	"gacczapa":{
+		"cl":"n",
+		"pr":["M","COLL"],
+		"tr":"loaves of bread"
+	},
+
+	"tatakarna":{
+		"cl":"v",
+		"pr":["TR"],
+		"tr":"to bake"
 	}
 }

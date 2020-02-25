@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1582197146
-ModificationTime: 1582647384
+ModificationTime: 1582672183
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -40,13 +40,13 @@ Lookup: 4 0 1 "multigraphs" { "multigraphs-1"  } ['liga' ('DFLT' <'dflt' > 'latn
 Lookup: 6 8 0 "'calt' r to low stem r" { "'calt' r to low stem r-1"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 8 0 "r to low tail r" { "r to low tail r-1"  } []
 Lookup: 1 8 0 "r to branch stem r" { "r to branch stem r-1"  } []
-Lookup: 6 8 0 "'calt' Alternative contestuali in Latino lookup 4" { "'calt' Alternative contestuali in Latino lookup 4-1"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 6 8 0 "'calt' r to branch stem r" { "'calt' Alternative contestuali in Latino lookup 4-1"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 8 0 "r to rising stem r" { "r to rising stem r-1"  } []
-Lookup: 6 8 0 "'calt' Alternative contestuali in Latino lookup 6" { "'calt' Alternative contestuali in Latino lookup 6-1"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 6 8 0 "'calt' r to rising stem r" { "'calt' Alternative contestuali in Latino lookup 6-1"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "kern-1" { "kern-1-sub" [150,15,4] } ['kern' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
-KernClass2: 8 10 "kern-1-sub"
+KernClass2: 9 10 "kern-1-sub"
  5 K g k
  3 d t
  33 S Z s z Agrave Aacute Acircumflex
@@ -54,6 +54,7 @@ KernClass2: 8 10 "kern-1-sub"
  3 b p
  24 r Ccedilla Egrave Eacute
  10 m n ntilde
+ 3 C E
  3 d t
  5 K g k
  3 w y
@@ -63,14 +64,14 @@ KernClass2: 8 10 "kern-1-sub"
  8 Ccedilla
  6 Egrave
  6 Eacute
- 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -93 {} -93 {} -93 {} -103 {} -107 {} -80 {} 0 {} 0 {} -53 {} 0 {} -13 {} -120 {} -80 {} 0 {} -107 {} -107 {} 0 {} 0 {} 0 {} 0 {} -50 {} -121 {} -30 {} 0 {} -120 {} 0 {} 0 {} 10 {} 0 {} 0 {} -67 {} -106 {} 13 {} -30 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 30 {} -120 {} 98 {} 19 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -26 {} -120 {} 0 {} -14 {} -133 {} -27 {} 0 {} -13 {} 0 {} 0 {} -80 {} -80 {} -40 {} 93 {} -67 {} 0 {} 0 {} 0 {} -173 {}
+ 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -93 {} -93 {} -93 {} -103 {} -107 {} -80 {} 0 {} 0 {} -53 {} 0 {} -13 {} -120 {} -80 {} 0 {} -107 {} -107 {} 0 {} 0 {} 0 {} 0 {} -50 {} -121 {} -30 {} 0 {} -120 {} 0 {} 0 {} 10 {} 0 {} 0 {} -67 {} -106 {} 13 {} -30 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 30 {} -120 {} 98 {} 19 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -26 {} -120 {} 0 {} -14 {} -133 {} -27 {} 0 {} -13 {} 0 {} 0 {} -80 {} -80 {} -40 {} 93 {} -67 {} 0 {} 0 {} 0 {} -173 {} 0 {} -93 {} -93 {} 0 {} -40 {} 0 {} 0 {} 0 {} 0 {} 0 {}
 ChainSub2: class "'calt' Alternative contestuali in Latino lookup 6-1" 3 3 3 1
   Class: 1 r
-  Class: 24 K b g k m n p w y ntilde
+  Class: 28 C E K b g k m n p w y ntilde
   BClass: 1 r
-  BClass: 24 K b g k m n p w y ntilde
+  BClass: 28 C E K b g k m n p w y ntilde
   FClass: 1 r
-  FClass: 24 K b g k m n p w y ntilde
+  FClass: 28 C E K b g k m n p w y ntilde
  1 1 0
   ClsList: 1
   BClsList: 2
@@ -83,11 +84,11 @@ ChainSub2: class "'calt' Alternative contestuali in Latino lookup 6-1" 3 3 3 1
 EndFPST
 ChainSub2: class "'calt' Alternative contestuali in Latino lookup 4-1" 3 3 3 1
   Class: 1 r
-  Class: 49 S h s z Agrave Acircumflex Atilde Ccedilla Egrave
+  Class: 40 h z Agrave Atilde Ccedilla Egrave Eacute
   BClass: 1 r
-  BClass: 49 S h s z Agrave Acircumflex Atilde Ccedilla Egrave
+  BClass: 40 h z Agrave Atilde Ccedilla Egrave Eacute
   FClass: 1 r
-  FClass: 49 S h s z Agrave Acircumflex Atilde Ccedilla Egrave
+  FClass: 40 h z Agrave Atilde Ccedilla Egrave Eacute
  1 1 0
   ClsList: 1
   BClsList: 2
@@ -135,7 +136,7 @@ Grid
  2000 354 l 1024
   Named: "lowerCircleHeight"
 EndSplineSet
-BeginChars: 256 47
+BeginChars: 256 48
 
 StartChar: K
 Encoding: 75 75 0
@@ -594,6 +595,7 @@ LayerCount: 2
 Fore
 Refer: 15 192 N 1 0 0 1 0 0 2
 Refer: 13 166 S 1 0 0 1 18 1 2
+Validated: 1
 Ligature2: "multigraphs-1" z period
 EndChar
 
@@ -888,10 +890,13 @@ StartChar: Z
 Encoding: 90 90 34
 Width: 540
 VWidth: 0
-Flags: HW
+Flags: W
+HStem: 334 50<171.151 364.849> 682 50<171.151 364.849>
+VStem: 20 60<464.932 601.068> 456 60<464.932 601.068>
 LayerCount: 2
 Fore
 Refer: 15 192 N 1 0 0 1 0 0 2
+Validated: 1
 EndChar
 
 StartChar: C
@@ -1094,6 +1099,30 @@ SplineSet
  496 403 528 369 528 327 c 4
  528 285 496 251 456 251 c 4
  416 251 384 285 384 327 c 4
+EndSplineSet
+Validated: 1
+EndChar
+
+StartChar: exclam
+Encoding: 33 33 47
+Width: 208
+VWidth: 0
+Flags: WO
+HStem: -5 96<55.123 142.877>
+VStem: 46 106<4.68573 81.3143> 57 84<327.111 800> 65 67<192 664.889>
+LayerCount: 2
+Fore
+SplineSet
+46 43 m 0xc0
+ 46 69 70 91 99 91 c 0
+ 128 91 152 69 152 43 c 0
+ 152 17 128 -5 99 -5 c 0
+ 70 -5 46 17 46 43 c 0xc0
+57 800 m 1xa0
+ 141 800 l 5xa0
+ 132 192 l 1
+ 65 192 l 1x90
+ 57 800 l 1xa0
 EndSplineSet
 Validated: 1
 EndChar
