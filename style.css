@@ -6,11 +6,11 @@
 }
 
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family:  sans-serif;
 }
 
-h1, h2, h3 {
-	font-family: 'Noto Serif', serif ;
+h1, h2, h3, h4, h5, h6 {
+	font-family:  sans-serif ;
 }
 
 .page{
@@ -172,10 +172,12 @@ h1, h2, h3 {
 
 .example td{
 	padding-right: 1ex; 
+	font-size: 1.2em;
 }
 
 .translation{
 	font-style: italic;
+	font-size:1.1em;
 }
 
 .lexicon{
@@ -211,10 +213,18 @@ h1, h2, h3 {
 	font-weight: 400;
 }
 
-.pronunciation{
-	font-size: 1.3em;
-	 font-family: serif ;
+.ipa, .pronunciation {
+	
+	font-family: sans-serif;
 }
+
+.pronunciation {
+	font-size:1.1em;
+	margin:0.5em;
+}
+
+
+
 .conscript{
 	font-size: 1.5em;
 	font-family: 'Hatami';

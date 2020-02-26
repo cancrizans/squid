@@ -50,8 +50,16 @@ function toScript(text){
 	return text;
 }
 
-function toIPA(text){
+function aff(a,b){
+	return a + "\u0361" + b;
+}
 
+var affV = aff("t","s");
+var affP = aff("t","ʃ");
+var affR = aff("ʈ","ʂ");
+
+function toIPA(text){
+	
 
 	text = text.replace(/-/g,"")
 				.replace(/mm/g,"mː")
@@ -62,25 +70,29 @@ function toIPA(text){
 				.replace(/rn/g,"ɳ")
 				.replace(/rr/g,"rː")
 				.replace(/rs/g,"ʂ")
-				.replace(/ts/g,"ts")
+				.replace(/ṣh/g,"ʂ")
 				.replace(/trj/g,"ɖʐ")
 				.replace(/rz/g,"ʐ")
+				.replace(/ẓh/g,"ʐ")
 				.replace(/j/g,"dʒ")
 				.replace(/dz/g,"dz")
 				.replace(/sh/g,"ʃ")
 				.replace(/zh/g,"ʒ")
+				.replace(/ċċh/g,"ʈːʂ")
 				.replace(/ccz/g,"ʈːʂ")
 				.replace(/rcch/g,"ʈːʂ")
 				.replace(/cch/g,"tːʃ")
-				.replace(/cz/g,"ʈʂ")
-				.replace(/rch/g,"ʈʂ")
-				.replace(/ch/g,"tʃ")
+				.replace(/ċh/g,affR)
+				.replace(/cz/g,affR)
+				.replace(/rch/g,affR)
+				.replace(/ch/g,affP)
 				.replace(/kk/g,"kː")
 				.replace(/gg/g,"gː")
 				.replace(/tt/g,"tː")
 				.replace(/dd/g,"dː")
 				.replace(/!!/g,"!ː")
 				.replace(/tts/g,"tːs")
+				.replace(/ts/g,affV)
 				.replace(/pp/g,"pː")
 				.replace(/y/g,"j");
 
@@ -113,6 +125,15 @@ function toIPA(text){
 	return outwords.join("  ");
 
 }
+
+
+var vowelRE = /[a|e|o|i|u|y|à-æ|è-ö|ø-ý|ÿ|Ā-ą|Ē-ě|Ō-œ|Ũ-ų|Ŷ-Ÿ|Ǎ-ǣ]/g
+
+function searchify(word){
+	return word.replace(vowelRE,"a")
+				.replace(/aa/g,"a");
+}
+
 
 function tonify(word,tone){
 
@@ -171,9 +192,9 @@ function applyToneRomanise(word,tone){
 }
 
 function compactRomanise(text){
-	text = text.replace(/rs/g,"ṣ")
+	text = text.replace(/rs/g,"ṣh")
 				.replace(/rn/g,"ṇ")
-				.replace(/rz/g,"ẓ");
+				.replace(/rz/g,"ẓh");
 	return text;
 }
 
