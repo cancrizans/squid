@@ -96,6 +96,9 @@ function toIPA(text){
 				.replace(/pp/g,"pː")
 				.replace(/y/g,"j");
 
+
+	
+
 	words = text.split(" ");
 
 	outwords = [];
@@ -137,6 +140,8 @@ function searchify(word){
 
 function tonify(word,tone){
 
+		word = word.replace(vowelRE,"a");
+
 		let syllables = word.trim().split("a").slice(0,-1);
 
 		let pitches = [...toneSequences[tone]];
@@ -175,6 +180,8 @@ function tonify(word,tone){
 
 		return {'consonants':syllables,'pitches':pitches}
 }
+
+
 
 function applyToneRomanise(word,tone){
 	let tonification = tonify(word,tone);

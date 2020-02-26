@@ -408,7 +408,7 @@
 
 		<div class="example">
 			<table>
-				<tr>  <td>{kārnote}</td> <td>{bǎnto-we}</td> <td>{tsȁno-neo}</td></tr>
+				<tr>  <td>{kǎrnoto-ze}</td> <td>{bǎnto-we}</td> <td>{tsȁno-neo}</td></tr>
 				<tr>  <td>the apples</td> <td>the person</td> <td>eat</td></tr>
 			</table>
 			<div class="translation">The person _ate_ the apples</div>
@@ -416,7 +416,7 @@
 
 		<p>This introduces a confusing construct that we will see later, known as the antipassive. This essentially shifts the agent into a patient and the patient into an indirect. Performing this maneuver where it is not strictly necessary constitutes in itself emphasis for the verb.</p>
 
-		<p>The marking of roles of nouns is through the use of case, which itself is determined through tones, as explained later. By default, Patients will be marked in the {Absolutive} case, while Agents will take on the {Dominant} case (which encompasses both the usual Ergative and Genitive cases). Reprising the first examples:</p>
+		<p>The marking of roles of nouns is through the use of case, which itself is determined through tones, as explained later. By default, Patients will be marked in the <strong>Absolutive</strong> case, while Agents will take on the <strong>Dominant</strong> case (which encompasses both the usual Ergative and Genitive cases). Reprising the first examples:</p>
 
 		<div class="example">
 			<table>
@@ -436,42 +436,45 @@
 			<div class="translation">The sun shines</div>
 		</div>
 
-<!-- 		<div class="example">
-			<table>
-				<tr><td>{kàcha-ze}</td> <td>{Ǎyoka}</td></tr>
-				<tr><td>ABL.F.house-in</td> <td>ABS.F.Ayaka</td></tr>
-			</table>
-			<div class="conscript">£kachaza _ayaka£</div> 
-			<div class="pronunciation">%Fkachaza Dayaka%</div>
-			<div class="translation">Ayaka is in the house</div>
-		</div>
 
-		<div class="example">
-			<table>
-				<tr><td>{kǎrnote}</td> <td>{Áyaka}</td> <td>{tsàne}</td></tr>
-				<tr><td>ABS.F.apples(COLL)</td> <td>ERG.F.Ayaka</td> <td>eat</td></tr>
-			</table>
-			 <div class="conscript">£karnata ayaka tsana£</div> 
-			<div class="pronunciation">%Dkarnata Rayaka Ftsana%</div>
-			<div class="translation">Ayaka ate the apples</div>
-		</div> -->
+		<h4>Ditransitive verbs and the complexities of giving</h4>
 
+		<p>The possibility exists in all natural languages for clauses that really involve three entities rather than one or two (ditransitives). An example is all verbs relating to giving, providing, taking from, performing actions on others, etc. These involve first of all a <strong>Donor</strong> (D), then an object, entity or action that is ``given'', the <strong>Theme</strong> (T), and finally a <strong>Recipient</strong> (R), which receives the Theme from the Donor. In aquatic ergativity, the Donor is treated as an Agent, the Recipient is treated as a Patient, and the Theme takes on a new role marked by the Instrumental case. Namely, a sentence like</p>
+
+		<div class="center bigger">The man gave bread to the woman</div>
+
+		would be formulated as
+
+		<div class="center bigger">The man gave the woman with bread</div>
+
+		or, much more simply, the Reticulan verb ``to provide'' already has this kind of properties. ECN applies the ``provide'' construction to all ditransitive verbs. The above sentence becomes:
+
+			example[gȯċċhepo gǎrottoche póneċha tȁtoyaro|INSTR.M.bread , ABS.F.woman , ERG.M.man, PERF.3.F.(give/provide)|Lgaċċhapa Dgarottoche Rponeċha Ttatoyaro| ``The man provided the woman with bread'']
+
+		<p>Note that the verb agrees in gender with neither the man nor the bread, but the woman!</p>
+
+		<p>The general pattern, in comparison with a very typical system in natural languages, can be given schematically:</p>
+
+			<div class="center">
+				<img src="img/alignment.png">
+			</div>
+
+		<p>Naderian has thus no use for an oblique / dative case or role separate from the absolutive / patient.</p>
 
 		<h3>Nouns</h3>
 
 		<p>Nouns are declensed by gender and case through tonal inflection. In addition, grammatical number is specified by postpositions.</p>
 
-		<p>There are five ``main'' or {Inflected Cases}:</p>
+		<p>There are four ``main'' or {Inflected Cases}:</p>
 
 		<div class="center" >
 			<table class="compact_table">
 				
 				<tr><th> Case </th><th> Code  </th><th> Masculine </th><th> Feminine </th> <th>General Meaning</th></tr>
-				<tr><td>null/Absolutive </td><td> ABS </td><td> P  </td><td> D </td> <td>Patience and passivity</td></tr> 
-				<tr><td>Dominant </td><td> DOM </td><td> R  </td><td> R</td> <td>Activity and ownership</td> </tr>
+				<tr><td>null/Absolutive </td><td> ABS </td><td> P  </td><td> D </td> <td>Patience and passivity, reception, direction, ingress</td></tr> 
+				<tr><td>Dominant </td><td> DOM </td><td> R  </td><td> R</td> <td>Activity, ownership and giving</td> </tr>
 				<tr><td>Ablative </td><td> ABL </td><td>  L     </td><td> F</td> <td>Removal, usage, help, egress</td></tr>
 				<tr><td>Transitional </td><td> TRN </td><td> L </td><td> L</td><td>Passage, consumption, transformation</td></tr>
-				<tr><td>Oblique </td><td> OBL </td><td> H </td><td> H </td><td>Reception, direction, ingress</td> </tr>
 			</table>
 		</div>
 
@@ -484,6 +487,8 @@
 				<tr><th>Meta Case</th> <th>Code</th> <th>Construction</th> <th>Example meaning</th></tr>
 				<tr><td>Absolutive (patient)  </td><td>ABS</td><td> ABS  </td> <td>The cat yawns.</td></tr>
 				<tr><td>Abessive (without)</td> <td>ABE</td> <td>ABS + {-ċhane}</td> <td>without the cat</td></tr>
+				<tr><td>Dative (giving to)</td> <td>DAT</td> <td rowspan="2">ABS + {-za}</td>  <td>to the cat</td></tr>
+				<tr><td>Allative (motion towards or onto)</td><td>ALL</td> <td>to the house</td></tr>
 				<tr><td>Ergative (agent) </td> <td>ERG</td> <td rowspan="2"> DOM</td> <td>The cat ate the mouse.</td></tr>
 				<tr><td>Genitive (possessor) </td><td>GEN</td> <td>The cat's whiskers.</td></tr> 
 				<tr><td>Vocative (addressing)</td><td>VOC</td><td>DOM + Honorific*</td> <td>Hey, cat!</td></tr>
@@ -493,8 +498,7 @@
 				<tr><td>Perlative (movement through) </td><td>PERL</td><td rowspan="3"> TRANS + {-za}</td> <td>through the forest</td></tr>
 				<tr><td>Malefactive (to the detriment of) </td><td>MAL</td> <td>to the detriment of the cat</td></tr>
 				<tr><td>Essive (temporarily as) </td><td>ESS</td> <td>as a cat</td></tr> 
-				<tr><td>Dative (giving to)</td> <td>DAT</td> <td>DAT</td> <td>to the cat</td></tr>
-				<tr><td>Allative (motion towards or onto)</td><td>ALL</td> <td>DAT + {-za}</td> <td>to the house</td></tr>
+				
 				<tr><td><span class="cmnt">more to come</span></td></tr>
 			</table>
 		</div>
