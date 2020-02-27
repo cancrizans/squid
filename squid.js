@@ -1,6 +1,6 @@
 toneSequences = {
-	'H': "˥˥",
-	'L': "˩˩",
+	'H': "˥",
+	'L': "˩",
 	'R': "˩˥",
 	'F': "˥˩",
 	'P': "˩˥˧",
@@ -74,7 +74,7 @@ function toIPA(text){
 				.replace(/trj/g,"ɖʐ")
 				.replace(/rz/g,"ʐ")
 				.replace(/ẓh/g,"ʐ")
-				.replace(/j/g,"dʒ")
+				
 				.replace(/dz/g,"dz")
 				.replace(/sh/g,"ʃ")
 				.replace(/zh/g,"ʒ")
