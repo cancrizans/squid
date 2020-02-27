@@ -29,6 +29,14 @@ h1 {
 	font-size: 2em;
 }
 
+ul{
+	margin: 1em;
+}
+
+li {
+	margin: 1em;
+}
+
 .page{
 	width: 100%;
 		display: flex;
@@ -64,16 +72,30 @@ h1 {
 .warning{
 	max-width: 260px;
 }
+.warningtwocols{
+	display: flex;
+	flex-direction: row;
+
+}
+.warningcol{
+	flex: 1 1 0px;
+	text-align: center;
+}
 
 .bigwarninglatin{
 	font-size:1.7em;
 	font-weight: bold;
+	margin-bottom: 0.7em;
 }
 
 .bigwarning{
 	font-size: 2.5em;
 	font-weight: bold;
 	margin-bottom:0.5em;
+}
+
+.warningtext{
+	text-align: justify;
 }
 
 .a4containercentered{
@@ -165,6 +187,10 @@ h1 {
 
 .bigger {
 	font-size: 1.3em;
+}
+
+.biggerer{
+	font-size: 1.5em;
 }
 
 .hide {

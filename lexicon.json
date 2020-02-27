@@ -2,7 +2,17 @@
 	"gaha":{
 		"cl":"n",
 		"pr":["F","MASS"],
-		"tr":["water"]
+		"tr":"water"
+	},
+	"gattacha": {
+		"cl":"n",
+		"pr":["F","MASS"],
+		"tr":"rainfall, rain"
+	},
+	"tatahaza":{
+		"cl":"v",
+		"pr":["INTR"],
+		"tr":"to come, arrive, happen"
 	},
 	"banta":{
 		"cl":"n",
@@ -44,6 +54,7 @@
 		"pr":["TR"],
 		"tr":"to shout, to scream"
 	},
+	
 	"kanyatsa":{
 		"cl":"n",
 		"pr":["M","SING"],
@@ -120,5 +131,11 @@
 		"cl":"v",
 		"pr":["INTR"],
 		"tr":"to smile"
+	},
+
+	"kataba":{
+		"cl":"n",
+		"pr":["F","SING"],
+		"tr":"written document, booklet, book"
 	}
 }

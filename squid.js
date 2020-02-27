@@ -168,7 +168,10 @@ function tonify(word,tone){
 		}
 
 		while(syllables.length > pitches.length){
-			pitches.splice(1,0,pitches[1]);
+			if(pitches.length == 1)
+				pitches.splice(1,0,pitches[0]);
+			else
+				pitches.splice(1,0,pitches[1]);
 		}
 
 
