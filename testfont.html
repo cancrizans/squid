@@ -6,9 +6,48 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="conscript">'yk ghsr s.tsrwk bmp nr mr njr njy nynj s.shS</div>
+	
+	<div>
+		<input type="range" id="fontsize" value="20" min="16" max="100">
+		<input type="checkbox" id="cb_bold"> Bold
+		<input type="checkbox" id="cb_italic"> Italic
+	</div>
 
-	<div class="conscript">gh 'Ekrn</div>
+	<textarea id="test" rows="4" cols="50" class="squidfont" style="width: 100%;">bN ndr ktsy</textarea>
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		
+	$(document).ready(function(){
+
+		var ta = $("#test");
+
+
+
+		$("#fontsize").on("input",function(){
+
+			ta.css("font-size",$(this).val()+"px");
+		});
+		$("#fontsize").trigger("input");
+
+
+		$("#cb_bold").change( function(){
+			ta.css("font-weight", $(this).is(":checked") ? "bold" : "normal");
+		});
+		$("#cb_bold").trigger("change");
+
+		$("#cb_italic").change( function(){
+			ta.css("font-style", $(this).is(":checked") ? "italic" : "normal");
+		});
+		$("#cb_italic").trigger("change");
+
+
+
+	});
+
+	</script>
+
 
 </body>
 </html>

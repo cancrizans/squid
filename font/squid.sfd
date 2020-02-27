@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1582197146
-ModificationTime: 1582803146
+ModificationTime: 1582804504
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -1094,6 +1094,7 @@ StartChar: ntilde
 Encoding: 241 241 45
 Width: 486
 VWidth: 0
+UnlinkRmOvrlpSave: 1
 Flags: W
 HStem: 399.788 46.4238<307.339 338.218> 719 50<139.507 262.493>
 VStem: 52 60<592.23 691.769> 290 60<592.23 691.769> 381.69 59.0879<550.35 620.286>
@@ -1119,7 +1120,6 @@ SplineSet
  346 423 l 1
 EndSplineSet
 Refer: 24 110 N 1 0 0 1 0 0 2
-LCarets2: 1 0
 Ligature2: "multigraphs-1" n j
 EndChar
 
@@ -1246,6 +1246,7 @@ StartChar: Edieresis
 Encoding: 203 203 51
 Width: 706
 VWidth: 0
+UnlinkRmOvrlpSave: 1
 Flags: W
 HStem: -25 50<165.315 264.128> 319 50<393.256 468.341> 338.308 47.3857<44.8451 85.2186> 642.119 20G<333.752 369.2>
 VStem: 78.5 60<52.527 188.911> 344.7 60<125.707 311.381 622.467 651.087> 522 59<100.04 233.978>
@@ -1268,7 +1269,6 @@ SplineSet
  580.419921875 132.055664062 568.430664062 100.61328125 549.541015625 73.03125 c 1x9e
 EndSplineSet
 Refer: 6 116 N 1 0 0 1 0 0 2
-LCarets2: 1 0
 Ligature2: "multigraphs-1" t r
 EndChar
 
@@ -1276,6 +1276,7 @@ StartChar: Igrave
 Encoding: 204 204 52
 Width: 706
 VWidth: 0
+UnlinkRmOvrlpSave: 1
 Flags: W
 HStem: -266.463 211.936 -25 50<165.315 264.128> 319 50<393.256 468.341> 338.308 47.3857<44.8451 85.2186> 642.119 20G<333.752 369.2>
 VStem: 78.5 60<52.527 188.911> 298.896 58.1035<-103.724 -65.497> 344.7 60<125.707 311.381 622.467 651.087> 396.509 58.9824<-155.803 -93.497> 522 59<100.04 233.978>
