@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500,700|Noto+Serif|Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Noto+Serif&display=swap');
 
 @font-face {
   font-family: Hatami;
@@ -6,12 +6,30 @@
 }
 
 body {
-    font-family:  sans-serif;
+    
+
+   
+    font-family: 'Noto Serif', serif ;
+
+
+
     font-size: 18px;
+
+    --font-family-titles: 'Montserrat', sans-serif;
+    --font-weight-titles: 700;
+}
+
+.parttitle {
+		font-family: var(--font-family-titles);
+	font-weight: var(--font-weight-titles);
+	font-size: 3em;
+	text-align: center;
+	margin:2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	
+	font-family: var(--font-family-titles);
+	font-weight: var(--font-weight-titles);
 }
 
 h4 {
@@ -147,6 +165,8 @@ li {
 	margin-left: 1em;
 	margin-right: 1em;
 }
+
+
 
 
 
