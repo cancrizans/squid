@@ -17,6 +17,9 @@ body {
 
     --font-family-titles: 'Montserrat', sans-serif;
     --font-weight-titles: 700;
+
+
+    --shading-col: #eeeeee;
 }
 
 .parttitle {
@@ -186,6 +189,10 @@ li {
 	background-color: #c0c0c0;
 }
 
+.shaded{
+	background-color: var(--shading-col);
+}
+
 .columlet{
 	display: flex;
 	flex-direction: column;
@@ -260,13 +267,49 @@ li {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	flex-grow: 1;
+	flex: 1 1 0px;
 }
 
+#search_bar{
+	margin: 2em;
+}
+
+.word_inspector{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+.inspector_lemma {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.inspector_props {
+	display: flex;
+	flex-direction: row;
+
+	justify-content: center;
+}
+
+.inspector_prop{
+	margin: 0.5em;
+}
+
+.inspector_translations{
+	font-size:1.2em;
+	font-style: italic;
+
+}
+
+.inspector_translations li{
+	margin-left: 0px;
+}
 .dictionary{
 	display: flex;
 	flex-direction: column;
-	flex-grow:1;
+	flex: 1 1 0px;
 }
 
 .word {

@@ -68,6 +68,8 @@ function toIPA(text){
 				.replace(/ny/g,"ɲ")
 				.replace(/rnn/g,"ɳː")
 				.replace(/rn/g,"ɳ")
+				.replace(/ṇṇ/g,"ɳː")
+				.replace(/ṇ/g,"ɳ")
 				.replace(/rr/g,"rː")
 				.replace(/rs/g,"ʂ")
 				.replace(/ṣh/g,"ʂ")
