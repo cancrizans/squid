@@ -39,12 +39,12 @@
 		"pr":["M","SING"],
 		"tr":"a sleep, a nap"
 	},
-	"hatsaṇa":{
+	"fatsaṇa":{
 		"cl":"v",
 		"pr":["TR"],
 		"tr":"to annoy"
 	},
-	"hanta":{
+	"fanta":{
 		"cl":"n",
 		"pr":["M","SING"],
 		"tr":"sun"
@@ -61,7 +61,7 @@
 		"tr":"arm"
 	},
 
-	"hantawari":{
+	"fantawari":{
 		"cl":"n",
 		"pr":["M","COLL","SET"],
 		"tr":"pairs of hands"
