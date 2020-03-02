@@ -84,7 +84,7 @@ var vowelNormalise = new RegExp("["+Object.values(precomposed_accented).concat(u
 var punctuation = /[\?|,|\.|!]/g;
 
 
-//following will turn any text with diacritics and tone marks into ascii romanisation
+//following will turn any text with diacritics and tone marks into clean-vowel romanisation
 function asciilitize(text){
 	let words = text.trim().replace(punctuation,"").split(" ");
 	let outwords = [];
@@ -111,19 +111,41 @@ function asciilitize(text){
 }
 
 
+var tonesPattern = "([P|D|R|F|T|J|H|L])";
 
+
+//following will turn clean-vowel into script text
 function toScript(text){
-	//should prepend _
+	text = text.replace(".","-");
+
+	text = text.replace(/tt/g,"t.")
+				.replace(/kk/g,"k.")
+				.replace(/gg/g,"g.")
+				.replace(/ny/g,"nj")
+				.replace(/nts/g,"X")
+				.replace(/nt/g,"N")
+				.replace(/ts/g,"x")
+				.replace(/rn/g,"n.")
+				.replace(/ṇ/g,"n.")
+				.replace(/sh/g,"S")
+				.replace(/ṣh/g,"s.")
+				.replace(/zh/g,"Z")
+				.replace(/rz/g,"z.")
+				.replace(/ẓh/g,"z.")
+				.replace(/f/g,"h");
+
+
 	
 
-	Object.keys(alphabet).forEach(function(key,index){
-		let sub = alphabet[key];
-		//let re = new RegExp(key,'g');
-		//text = text.replace(key,sub);
-		text = text.split(key).join(sub);
-	});
+	text = text.replace(vowelNormalise,"a");
+				.replace(/ ?([P|D|R|F|T|J|H|L])a/g,"$1'")
+				.replace(/ ?([P|D|R|F|T|J|H|L])/g,"$1")
+				.replace(/a/g,"");
+
+	
 
 	return text;
+
 }
 
 function aff(a,b){

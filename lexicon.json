@@ -49,6 +49,11 @@
 		"pr":["M","SING"],
 		"tr":"sun"
 	},
+	"facchatezha":{
+		"cl":"n",
+		"pr":["M","SING"],
+		"tr":"sunrise"
+	},
 	"ntakahaza":{
 		"cl":"v",
 		"pr":["TR"],
@@ -137,5 +142,17 @@
 		"cl":"n",
 		"pr":["F","SING"],
 		"tr":"written document, booklet, book"
+	},
+
+	"bahatsa":{
+		"cl":"v",
+		"pr":["TR"],
+		"tr":["to look at, to stare at","to desire, to consider acquiring"]
+	},
+
+	"nyahatsa":{
+		"cl":"adj",
+		"pr":[],
+		"tr":["dry (as in not wet)","dried, dessiccated","annoyed, irritated"]
 	}
 }

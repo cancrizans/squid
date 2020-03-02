@@ -13,15 +13,17 @@
 		<input type="checkbox" id="cb_italic"> Italic
 	</div>
 
-	<textarea id="test" rows="4" cols="50" class="squidfont" style="width: 100%;">bN ndr ktsy</textarea>
+	<textarea id="test" rows="4" cols="50" style="width: 100%;">Dbantoe Rnadaru</textarea>
 
+	<div id="outText" class="squidfont"></div>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="squid.js"></script>
 	<script type="text/javascript">
 		
 	$(document).ready(function(){
 
-		var ta = $("#test");
+		var ta = $("#outText");
 
 
 
@@ -42,6 +44,11 @@
 		});
 		$("#cb_italic").trigger("change");
 
+
+		$("#test").on("input",function(){
+			let text = $(this).val();
+			ta.text(toScript(text));
+		});
 
 
 	});
