@@ -127,17 +127,18 @@ function toScript(text){
 				.replace(/ts/g,"x")
 				.replace(/rn/g,"n.")
 				.replace(/ṇ/g,"n.")
+				.replace(/rsh/g,"s.")
 				.replace(/sh/g,"S")
 				.replace(/ṣh/g,"s.")
+				.replace(/rzh/g,"z.")
 				.replace(/zh/g,"Z")
-				.replace(/rz/g,"z.")
 				.replace(/ẓh/g,"z.")
 				.replace(/f/g,"h");
 
 
 	
 
-	text = text.replace(vowelNormalise,"a");
+	text = text.replace(vowelNormalise,"a")
 				.replace(/ ?([P|D|R|F|T|J|H|L])a/g,"$1'")
 				.replace(/ ?([P|D|R|F|T|J|H|L])/g,"$1")
 				.replace(/a/g,"");
