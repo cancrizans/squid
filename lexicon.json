@@ -96,6 +96,42 @@
 		"tr":"tall"
 	},
 
+	"paka":{
+		"cl":"adj",
+		"pr":[],
+		"tr":"small"
+	},
+
+	"danyaka":{
+		"cl":"adj",
+		"pr":[],
+		"tr":"big, large"
+	},
+
+	"samara":{
+		"cl":"n",
+		"pr":["F","MASS"],
+		"tr":"blood"
+	},
+
+	"kanchasa":{
+		"cl":"v",
+		"pr":["TR"],
+		"tr":"to drink"
+	},
+
+	"yȧ":{
+		"cl":"sentence word",
+		"pr":[],
+		"tr":"yes"
+	},
+
+	"kào":{
+		"cl":"sentence word",
+		"pr":[],
+		"tr":"no"
+	},
+
 	"samagasha":{
 		"cl":"adj",
 		"pr":[],
@@ -154,5 +190,11 @@
 		"cl":"adj",
 		"pr":[],
 		"tr":["dry (as in not wet)","dried, dessiccated","annoyed, irritated"]
+	},
+
+	"mama":{
+		"cl":"n",
+		"pr":["M","SET","SING"],
+		"tr":["pair of breasts"]
 	}
 }

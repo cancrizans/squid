@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1582197146
-ModificationTime: 1583161285
+ModificationTime: 1583312869
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -49,10 +49,12 @@ Lookup: 1 8 0 "r to branch stem r" { "r to branch stem r-1"  } []
 Lookup: 6 8 0 "'calt' r to branch stem r" { "'calt' Alternative contestuali in Latino lookup 4-1"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 1 8 0 "r to rising stem r" { "r to rising stem r-1"  } []
 Lookup: 6 8 0 "'calt' r to rising stem r" { "'calt' Alternative contestuali in Latino lookup 6-1"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 1 12 0 "' to connecting '" { "' to connecting '-1"  } []
+Lookup: 6 12 0 "calt ' to connecting '" { "calt ' to connecting '-1"  } ['calt' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 Lookup: 258 0 0 "kern-1" { "kern-1-sub" [150,15,4] } ['kern' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
-KernClass2: 16 13 "kern-1-sub"
+KernClass2: 17 13 "kern-1-sub"
  12 K g k Oacute
  3 d t
  33 S Z s z Agrave Aacute Acircumflex
@@ -65,9 +67,10 @@ KernClass2: 16 13 "kern-1-sub"
  16 Edieresis Igrave
  10 X x Ograve
  5 F P R
- 9 Idieresis
+ 18 Idieresis aring ae
  1 h
  11 quotesingle
+ 6 eacute
  20 d t Edieresis Igrave
  25 K N X g k x Ograve Oacute
  13 w y Idieresis
@@ -80,14 +83,31 @@ KernClass2: 16 13 "kern-1-sub"
  5 F P R
  1 n
  1 h
- 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -80 {} -66 {} -106 {} -156 {} -94 {} -143 {} 0 {} 0 {} -53 {} -67 {} -133 {} -160 {} 0 {} -80 {} -120 {} -40 {} -147 {} -107 {} -197 {} 0 {} 0 {} 0 {} -93 {} -187 {} -187 {} 0 {} -50 {} -188 {} -70 {} 0 {} -120 {} -50 {} -40 {} 10 {} 0 {} 0 {} -213 {} -40 {} 0 {} -67 {} -133 {} -27 {} -83 {} 0 {} -80 {} 0 {} 0 {} 0 {} -53 {} -67 {} -66 {} 0 {} -37 {} -120 {} -9 {} -101 {} 0 {} -70 {} 0 {} 0 {} 0 {} 0 {} -67 {} -133 {} 0 {} -26 {} -120 {} -43 {} -14 {} -133 {} -87 {} 0 {} -13 {} 0 {} -40 {} -253 {} -27 {} 0 {} -80 {} -133 {} -40 {} -40 {} -153 {} -70 {} -3 {} -60 {} -173 {} 0 {} -187 {} -67 {} 0 {} -26 {} -93 {} 0 {} -40 {} 0 {} -70 {} 0 {} 0 {} 0 {} -40 {} -53 {} -40 {} 0 {} -107 {} -213 {} -67 {} -107 {} -93 {} -100 {} 0 {} 0 {} -93 {} -67 {} -67 {} -133 {} 0 {} -170 {} -230 {} -67 {} -147 {} -93 {} -127 {} 0 {} 0 {} -93 {} -147 {} -147 {} -160 {} 0 {} -40 {} -80 {} -20 {} 0 {} -93 {} -93 {} 67 {} 0 {} 0 {} -27 {} -173 {} -53 {} 0 {} -53 {} -133 {} -30 {} 0 {} -27 {} 0 {} 0 {} 0 {} 0 {} 0 {} -200 {} 0 {} 0 {} -20 {} -17 {} 0 {} 40 {} 0 {} -40 {} 220 {} 0 {} 0 {} -50 {} -30 {} -40 {} 0 {} -40 {} -133 {} -13 {} -40 {} -133 {} -40 {} -27 {} 0 {} 0 {} -27 {} -93 {} -40 {} 0 {} -67 {} -320 {} -120 {} -80 {} -10 {} 0 {} 0 {} 0 {} 0 {} 0 {} -150 {} -90 {}
+ 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -80 {} -66 {} -106 {} -156 {} -94 {} -143 {} 0 {} 0 {} -53 {} -67 {} -133 {} -160 {} 0 {} -80 {} -120 {} -40 {} -147 {} -107 {} -197 {} 0 {} 0 {} 0 {} -93 {} -187 {} -187 {} 0 {} -50 {} -188 {} -70 {} 0 {} -120 {} -50 {} -40 {} 10 {} 0 {} 0 {} -213 {} -40 {} 0 {} -67 {} -133 {} -27 {} -83 {} 0 {} -80 {} 0 {} 0 {} 0 {} -53 {} -67 {} -66 {} 0 {} -37 {} -120 {} -9 {} -101 {} 0 {} -70 {} 0 {} 0 {} 0 {} 0 {} -67 {} -133 {} 0 {} -26 {} -120 {} -43 {} -14 {} -133 {} -87 {} 0 {} -13 {} 0 {} -40 {} -253 {} -27 {} 0 {} -80 {} -133 {} -40 {} -40 {} -153 {} -70 {} -3 {} -60 {} -173 {} 0 {} -187 {} -67 {} 0 {} -26 {} -93 {} 0 {} -40 {} 0 {} -70 {} 0 {} 0 {} 0 {} -40 {} -53 {} -40 {} 0 {} -107 {} -213 {} -67 {} -107 {} -93 {} -100 {} 0 {} 0 {} -93 {} -67 {} -67 {} -133 {} 0 {} -170 {} -230 {} -67 {} -147 {} -93 {} -127 {} 0 {} 0 {} -93 {} -147 {} -147 {} -160 {} 0 {} -40 {} -80 {} -20 {} 0 {} -93 {} -93 {} 67 {} 0 {} 0 {} -27 {} -173 {} -53 {} 0 {} -53 {} -133 {} -30 {} 0 {} -27 {} 0 {} 0 {} 0 {} 0 {} 0 {} -200 {} 0 {} 0 {} -20 {} -17 {} 0 {} 40 {} 0 {} -40 {} 220 {} 0 {} 0 {} -50 {} -30 {} -40 {} 0 {} -40 {} -133 {} -13 {} -40 {} -133 {} -40 {} -27 {} 0 {} 0 {} -27 {} -93 {} -40 {} 0 {} 13 {} -53 {} 0 {} -14 {} -10 {} 0 {} 0 {} 0 {} 0 {} 0 {} -243 {} -10 {} 0 {} 0 {} -280 {} -93 {} -80 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -147 {} -80 {}
+ChainSub2: class "calt ' to connecting '-1" 3 3 3 1
+  Class: 11 quotesingle
+  Class: 82 S Z g h k r s w y z Agrave Acircumflex Atilde Iacute Idieresis Ograve Oacute Thorn
+  BClass: 11 quotesingle
+  BClass: 82 S Z g h k r s w y z Agrave Acircumflex Atilde Iacute Idieresis Ograve Oacute Thorn
+  FClass: 11 quotesingle
+  FClass: 82 S Z g h k r s w y z Agrave Acircumflex Atilde Iacute Idieresis Ograve Oacute Thorn
+ 1 0 1
+  ClsList: 1
+  BClsList:
+  FClsList: 2
+ 1
+  SeqLookup: 0 "' to connecting '"
+  ClassNames: "All_Others" "ap" "hunch"
+  BClassNames: "All_Others" "ap" "hunch"
+  FClassNames: "All_Others" "ap" "hunch"
+EndFPST
 ChainSub2: class "'calt' Alternative contestuali in Latino lookup 6-1" 3 3 3 1
   Class: 7 r Thorn
-  Class: 53 C E K N b g k p w y Edieresis Igrave Idieresis Oacute
+  Class: 62 C E K N b g k p w y Edieresis Igrave Idieresis Oacute aring ae
   BClass: 7 r Thorn
-  BClass: 53 C E K N b g k p w y Edieresis Igrave Idieresis Oacute
+  BClass: 62 C E K N b g k p w y Edieresis Igrave Idieresis Oacute aring ae
   FClass: 7 r Thorn
-  FClass: 53 C E K N b g k p w y Edieresis Igrave Idieresis Oacute
+  FClass: 62 C E K N b g k p w y Edieresis Igrave Idieresis Oacute aring ae
  1 1 0
   ClsList: 1
   BClsList: 2
@@ -152,7 +172,7 @@ Grid
  2000 354 l 1024
   Named: "lowerCircleHeight"
 EndSplineSet
-BeginChars: 256 67
+BeginChars: 256 71
 
 StartChar: K
 Encoding: 75 75 0
@@ -621,11 +641,20 @@ Width: 343
 VWidth: 0
 UnlinkRmOvrlpSave: 1
 Flags: W
-HStem: 487 50<256.822 317.148>
-VStem: 15.8623 301.286
+HStem: 294.082 47.835<128.176 179.942>
+VStem: 250 60<395.349 512.303>
 LayerCount: 2
 Fore
 SplineSet
+174 617 m 1
+ 198.546875 631.373046875 l 1
+ 236.96484375 585.806640625 310 535.954101562 310 445 c 0
+ 310 346.307617188 200.3359375 311.728515625 130.731445312 294.08203125 c 1
+ 122 318 l 1
+ 113.268554688 341.916992188 l 1
+ 185.6640625 360.271484375 250 385.692382812 250 445 c 0
+ 250 512.044921875 197.03515625 546.193359375 149.453125 602.627929688 c 1
+ 174 617 l 1
 230 706 m 1
  258.216796875 697.508789062 l 1
  217.18359375 602.817382812 153.530273438 539.448242188 50.1376953125 479.48046875 c 1
@@ -633,14 +662,8 @@ SplineSet
  15.8623046875 520.51953125 l 1
  112.469726562 576.551757812 164.81640625 629.182617188 201.783203125 714.491210938 c 1
  230 706 l 1
-178.1484375 623.600585938 m 1
- 205.87890625 633.139648438 l 1
- 238.225585938 567.838867188 263.661132812 537 317.1484375 537 c 1
- 317.1484375 512 l 1
- 317.1484375 487 l 1
- 222.635742188 487 182.071289062 550.161132812 150.41796875 614.061523438 c 1
- 178.1484375 623.600585938 l 1
 EndSplineSet
+Substitution2: "' to connecting '-1" eacute
 EndChar
 
 StartChar: n
@@ -935,26 +958,26 @@ EndChar
 
 StartChar: P
 Encoding: 80 80 38
-Width: 180
+Width: 270
 VWidth: 0
 Flags: W
-HStem: 529.254 154.746
-VStem: -2.81152 179.063
+HStem: 521.575 202.425
+VStem: 13.7559 239.312
 LayerCount: 2
 Fore
 SplineSet
-25 538.626953125 m 5
- -2.8115234375 548 l 5
- 63.1884765625 684 l 5
- 119.251953125 683.036132812 l 5
- 176.251953125 550.03515625 l 5
- 148 541.626953125 l 5
- 119.748046875 533.21875 l 5
- 89.259765625 604.358398438 l 5
- 52.8115234375 529.25390625 l 5
- 25 538.626953125 l 5
+31 563.509765625 m 5
+ 13.755859375 583.966796875 l 5
+ 51.1796875 605.874023438 70.431640625 623.869140625 95.453125 672.2109375 c 6
+ 122.259765625 724 l 5
+ 150.303710938 672.66796875 l 6
+ 177.333007812 623.192382812 213.583984375 591.176757812 253.068359375 555.444335938 c 5
+ 231 538.509765625 l 5
+ 208.931640625 521.575195312 l 5
+ 180.618164062 547.197265625 150.805664062 573.379882812 123.866210938 608.653320312 c 5
+ 103.219726562 580.794921875 78.583984375 560.8125 48.244140625 543.052734375 c 5
+ 31 563.509765625 l 5
 EndSplineSet
-Validated: 1
 EndChar
 
 StartChar: R
@@ -981,20 +1004,14 @@ EndChar
 
 StartChar: T
 Encoding: 84 84 40
-Width: 1000
+Width: 413
 VWidth: 0
-HStem: 222 284<427.481 558.519>
-VStem: 367 252<284.793 443.207>
+Flags: W
+HStem: 645.089 50<141.119 212.809>
+VStem: 36.1052 57.9746<538.975 581.481>
 LayerCount: 2
 Fore
-SplineSet
-367 364 m 4
- 367 442 423 506 493 506 c 4
- 563 506 619 442 619 364 c 4
- 619 286 563 222 493 222 c 4
- 423 222 367 286 367 364 c 4
-EndSplineSet
-Validated: 1
+Refer: 13 166 N -1 0 0 -1 417.093 783.089 2
 EndChar
 
 StartChar: H
@@ -1035,20 +1052,14 @@ EndChar
 
 StartChar: J
 Encoding: 74 74 43
-Width: 1000
+Width: 402
 VWidth: 0
-HStem: 224 260<394.145 551.855>
-VStem: 327 292<286.5 421.5>
+Flags: W
+HStem: 538 50<209.284 280.974>
+VStem: 328.013 57.9746<651.608 694.114>
 LayerCount: 2
 Fore
-SplineSet
-327 354 m 4
- 327 426 392 484 473 484 c 4
- 554 484 619 426 619 354 c 4
- 619 282 554 224 473 224 c 4
- 392 224 327 282 327 354 c 4
-EndSplineSet
-Validated: 1
+Refer: 13 166 N 1 0 0 1 5 450 2
 EndChar
 
 StartChar: ntilde
@@ -1374,23 +1385,9 @@ HStem: -25 50<167.568 315.006> 200.5 49<412.265 469.032> 329 50<162.184 306.534>
 VStem: 35 61<100.899 259.79 323.108 461.733> 371 60<84.7453 262.514> 523 60<-67 415>
 LayerCount: 2
 Fore
-SplineSet
-553 415 m 1
- 583 415 l 1
- 583 -67 l 1
- 553 -67 l 1
- 523 -67 l 1
- 523 415 l 1
- 553 415 l 1
-408 225 m 1
- 402.029296875 249.5 l 1
- 459.87890625 259.290039062 502.822265625 283.653320312 526.6953125 327.357421875 c 1
- 554 317 l 1
- 581.3046875 306.642578125 l 1
- 548.53515625 246.653320312 486.12109375 212.709960938 413.970703125 200.5 c 1
- 408 225 l 1
-EndSplineSet
 Refer: 4 121 N 1 0 0 1 0 0 2
+Refer: 68 218 N 1 0 0 1 0 0 2
+LCarets2: 1 0
 Ligature2: "multigraphs-1" t period
 EndChar
 
@@ -1545,6 +1542,90 @@ Ligature2: "multigraphs-1" n period
 Substitution2: "r to low tail r-1" agrave
 Substitution2: "r to branch stem r-1" aacute
 Substitution2: "r to rising stem r-1" acircumflex
+EndChar
+
+StartChar: aring
+Encoding: 229 229 67
+Width: 637
+VWidth: 0
+UnlinkRmOvrlpSave: 1
+Flags: W
+HStem: -25 50<150.994 298.432> 200.5 49<412.265 469.032> 329 50<159.466 303.816> 598.6 50<133.53 277.481>
+VStem: 35 60<84.7453 262.514> 370 61<100.899 259.79 323.108 461.733> 523 60<-67 415>
+LayerCount: 2
+Fore
+Refer: 34 67 N 1 0 0 1 0 0 2
+Refer: 68 218 N 1 0 0 1 0 0 2
+Ligature2: "multigraphs-1" C period
+EndChar
+
+StartChar: Uacute
+Encoding: 218 218 68
+Width: 622
+VWidth: 0
+UnlinkRmOvrlpSave: 1
+Flags: W
+HStem: 200.5 49<412.265 469.032>
+VStem: 523 60<-67 415>
+LayerCount: 2
+Fore
+SplineSet
+553 415 m 5
+ 583 415 l 5
+ 583 -67 l 5
+ 553 -67 l 5
+ 523 -67 l 5
+ 523 415 l 5
+ 553 415 l 5
+408 225 m 5
+ 402.029296875 249.5 l 5
+ 459.87890625 259.290039062 502.822265625 283.653320312 526.6953125 327.357421875 c 5
+ 554 317 l 5
+ 581.3046875 306.642578125 l 5
+ 548.53515625 246.653320312 486.12109375 212.709960938 413.970703125 200.5 c 5
+ 408 225 l 5
+EndSplineSet
+EndChar
+
+StartChar: ae
+Encoding: 230 230 69
+Width: 637
+VWidth: 0
+Flags: W
+HStem: -322.878 237.351 -25 50<150.994 298.432> 200.5 49<412.265 469.032> 329 50<159.466 303.816> 598.6 50<133.53 277.481>
+VStem: 35 60<84.7453 262.514> 236.896 58.1035<-134.724 -96.497> 318.018 58.9824<-212.218 -149.912> 370 61<100.899 259.79 323.108 461.733> 523 60<-67 415>
+LayerCount: 2
+Fore
+Refer: 67 229 N 1 0 0 1 0 0 2
+Refer: 11 165 S 1 0 0 1 110 -380 2
+Ligature2: "multigraphs-1" E period
+EndChar
+
+StartChar: eacute
+Encoding: 233 233 70
+Width: 318
+VWidth: 0
+Flags: W
+HStem: 487 50<256.822 317.148>
+VStem: 15.8623 301.286
+LayerCount: 2
+Fore
+SplineSet
+230 706 m 1
+ 258.216796875 697.508789062 l 1
+ 217.18359375 602.817382812 153.530273438 539.448242188 50.1376953125 479.48046875 c 1
+ 33 500 l 1
+ 15.8623046875 520.51953125 l 1
+ 112.469726562 576.551757812 164.81640625 629.182617188 201.783203125 714.491210938 c 1
+ 230 706 l 1
+178.1484375 623.600585938 m 1
+ 205.87890625 633.139648438 l 1
+ 238.225585938 567.838867188 263.661132812 537 317.1484375 537 c 1
+ 317.1484375 512 l 1
+ 317.1484375 487 l 1
+ 222.635742188 487 182.071289062 550.161132812 150.41796875 614.061523438 c 1
+ 178.1484375 623.600585938 l 1
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont

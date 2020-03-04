@@ -88,9 +88,10 @@ var punctuation = /[\?|,|\.|!]/g;
 function asciilitize(text){
 	let words = text.trim().replace(punctuation,"").split(" ");
 	let outwords = [];
-	for (let w of words){
+	for (let ww of words){
 
-		w = w.trim();
+		let w = ww.trim();
+
 		if (w=="")
 			continue;
 
@@ -104,8 +105,11 @@ function asciilitize(text){
 		}
 
 		w = w.replace(vowelNormalise,"a");
+		
 		outwords.push(T+w);
 	}
+
+	
 
 	return outwords.join(" ");
 }
@@ -118,7 +122,8 @@ var tonesPattern = "([P|D|R|F|T|J|H|L])";
 function toScript(text){
 	text = text.replace(".","-");
 
-	text = text.replace(/tt/g,"t.")
+	text = text.replace(/tts/g,"x.")
+				.replace(/tt/g,"t.")
 				.replace(/kk/g,"k.")
 				.replace(/gg/g,"g.")
 				.replace(/ny/g,"nj")

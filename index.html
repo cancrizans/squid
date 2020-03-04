@@ -192,9 +192,9 @@
 					<tr>							<td>%ch%</td>	<td colspan="2">ch</td>		<td>£C£</td> 	<td><strong>ch</strong>eck</td>		</tr>
 					<tr>							<td>%rch%</td>	<td>cz</td>		<td>ċh</td>		<td>£E£</td>		</tr>
 					<tr>							<td>%h% (%ɸ%)</td>	<td colspan="2">h (f)</td>		<td>£h£</td>	<td><strong>h</strong>ow</td>	</tr>
-					<tr>							<td>%tts%</td>	<td colspan="2">tts</td>				</tr>
-					<tr>							<td>%cch%</td>	<td colspan="2">cch</td>				</tr>
-					<tr>							<td>%rcch%</td>	<td>ccz</td>		<td>ċċh</td>				</tr>
+					<tr>							<td>%tts%</td>	<td colspan="2">tts</td>	<td>£x.£</td>			</tr>
+					<tr>							<td>%cch%</td>	<td colspan="2">cch</td>	<td>£C.£</td>			</tr>
+					<tr>							<td>%rcch%</td>	<td>ccz</td>		<td>ċċh</td> <td>£E.£</td>				</tr>
 					<tr><td rowspan="3">VI</td>		<td>%b%</td>	<td colspan="2">b</td>		<td>£b£</td>	<td><strong>b</strong>ad</td>	</tr>
 					<tr>							<td>%d%</td>	<td colspan="2">d</td>		<td>£d£</td>	<td><strong>d</strong>o</td>	</tr>
 					<tr>							<td>%g%</td>	<td colspan="2">g</td>		<td>£g£</td>	<td><strong>g</strong>ive</td>	</tr>
@@ -924,6 +924,7 @@
 
 					<div class="word_inspector">
 						<div class="inspector_lemma">Click an entry...</div>
+						<div class="squidfont inspector_conscript"></div>
 						<div class="inspector_props"></div>
 						<ol class="inspector_translations"></ol>
 
@@ -960,8 +961,8 @@
 						<td>{sh}</td><td>{zh}</td> <td>{ch}</td> <td>{cch}</td>  
 					</tr>
 					<tr>
-						<th>Symbol</th><td>£k£</td>	<td>£g£</td>	<td>£k.£</td> <td>£p£</td> <td>£b£</td> <td>£p.£</td> <td>£t£</td><td>£d£</td><td>£t.£</td> <td>£s£</td> <td>£z£</td> <td>£x£</td>	<td></td>
-						<td>£S£</td> <td>£Z£</td> <td>£C£</td> <td></td> 
+						<th>Symbol</th><td>£k£</td>	<td>£g£</td>	<td>£k.£</td> <td>£p£</td> <td>£b£</td> <td>£p.£</td> <td>£t£</td><td>£d£</td><td>£t.£</td> <td>£s£</td> <td>£z£</td> <td>£x£</td>	<td>£x.£</td>
+						<td>£S£</td> <td>£Z£</td> <td>£C£</td> <td>£C.£</td> 
 					</tr>
 					<tr>
 						<th>Mnemonic</th> <td colspan="4">{ṣhôẓheċhaċċhu}</td> <td colspan="4">{mônaṇanye}</td> <td colspan="4">{fôyaware}</td> <td colspan="4">{ôntantsanche}</td>
@@ -971,7 +972,7 @@
 						<td>nt</td>	<td>nts</td><td>nch</td>
 					</tr>
 					<tr>
-						<th>Symbol</th><td>£s.£</td> <td>£z.£</td> <td>£E£</td> <td></td> <td>£m£</td> <td>£n£</td> <td>£n.£</td> <td>£nj£</td> <td>£h£</td> <td>£y£</td> <td>£w£</td> <td>£r£</td> <td>£'£</td>   <td>£N£</td> <td>£X£</td><td></td>
+						<th>Symbol</th><td>£s.£</td> <td>£z.£</td> <td>£E£</td> <td>£E.£</td> <td>£m£</td> <td>£n£</td> <td>£n.£</td> <td>£nj£</td> <td>£h£</td> <td>£y£</td> <td>£w£</td> <td>£r£</td> <td>£'£</td>   <td>£N£</td> <td>£X£</td><td></td>
 					</tr>
 				</table>
 
@@ -981,7 +982,7 @@
 			<div class="center">
 				<table class="bigger compact_table">
 					<tr>
-						<th>Marker</th> <td></td> <td>£P£</td><td>£R£</td><td>£F£</td> <td></td> <td></td><td></td><td></td>
+						<th>Marker</th> <td></td> <td>£P£</td><td>£R£</td><td>£F£</td> <td></td> <td></td><td>£T£</td><td>£J£</td>
 					</tr>
 					<tr>
 						<th>Tone</th> <td>D</td> <td>P</td><td>R</td><td>F</td><td>H</td> <td>L</td><td>T</td><td>J</td>
@@ -1004,7 +1005,7 @@
 					£'£ connects to some following letters, like £'y£
 				</li>
 				<li>
-					£k£, £g£, £k.£, £x£, £X£, £N£ connect to some preceding letters, like £wk£, £bg£, £Ex£ etc.
+					£k£, £g£, £k.£, £x£, £X£, £x.£, £N£ connect to some preceding letters, like £wk£, £bg£, £Ex£ etc.
 				</li>
 			</ul>
 
@@ -1130,9 +1131,13 @@
 					wd.lemmaTone = getInflectionToneVerb("M","PERF");
 				}
 
-
-				wd.lemma = applyToneRomanise(w,wd.lemmaTone);
+				if(wd.lemmaTone!="")
+					wd.lemma = applyToneRomanise(w,wd.lemmaTone);
+				else
+					wd.lemma = w;
 				wd.ipa = toIPA(wd.lemmaTone+w)
+
+				wd.script = toScript(asciilitize(w));
 
 
 				var div = $(templ);
@@ -1176,6 +1181,8 @@
 				propps.html("");
 				propps.append(wd.pr.map(p => propToNiceDiv(p)) );
 
+
+				$(".inspector_conscript").text(wd.script);
 
 				$(".inspector_translations").html(wd.translation.map(t => `<li>${t}</li>`).join(""));
 			}
