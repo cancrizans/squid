@@ -196,5 +196,23 @@
 		"cl":"n",
 		"pr":["M","SET","SING"],
 		"tr":["pair of breasts"]
+	},
+
+	"katawaraba":{
+		"cl":"v",
+		"pr":["TR"],
+		"tr":"to make wait"
+	},
+
+	"katawarappa":{
+		"cl":"v",
+		"pr":["NOM-INTR"],
+		"tr":"to wait"
+	},
+
+	"bahaċhama":{
+		"cl":"v",
+		"pr":["NOM-INTR"],
+		"tr":["to become visible, to appear","to show off"]
 	}
 }
