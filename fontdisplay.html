@@ -5,9 +5,12 @@
 	<title></title>
 </head>
 <body>
-	<h1>Hatami: a font for Language of Squid People</h1>
+	<h1>Hatami: a font for the Language of Squid People</h1>
 
-	<div class="squidfont" style="font-size: 3em;">htm: bN ndrx tphs</div>
+
+	<div id="pointsizetest" style="display: flex; flex-direction: row"></div>
+
+	<h2>Table of kerning, alternates and ligatures</h2>
 
 	<table id="digraphtable" class="squidfont" style="font-size: 1.4em"></table>
 
@@ -15,14 +18,25 @@
 	<script type="text/javascript">
 		
 		var letters = ["'","b","C","d","g","h","k","k.","m","n","n.","nj","N","p","p.","r","s","s.","S","t","t.","w","x","X","y","z","Z","z."]
+		var lettersonlybefore = ["br","yr","sr"];	
 
 		var tab = $("#digraphtable");
 
-		letters.forEach(function(l){
+		letters.concat(lettersonlybefore).forEach(function(l){
 			let tr = $("<tr></tr>");
 			tr.html(letters.map(k=>`<td>${l}${k}</td>`).join(""));
 			tr.appendTo(tab);
 		});
+
+		for(let w of ["400","700"]){
+			let bd = $('<div style="margin:20px;"></div>');
+			bd.appendTo($("#pointsizetest"));
+			for(let i = 80; i>12; i-=4){
+
+				let div = $(`<div class="squidfont" style="font-size: ${i}px; font-weight:${w}; text-align:center">htm: bN ndrx tphs</div>`);
+				bd.append(div);
+			}
+		}
 
 	</script>
 

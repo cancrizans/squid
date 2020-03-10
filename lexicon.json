@@ -214,5 +214,23 @@
 		"cl":"v",
 		"pr":["NOM-INTR"],
 		"tr":["to become visible, to appear","to show off"]
+	},
+
+	"taga":{
+		"cl":"v",
+		"pr":["TR"],
+		"tr":"eat"
+	},
+
+	"shantsaya":{
+		"cl":"n",
+		"pr":["M","SING"],
+		"tr":"key"
+	},
+
+	"wanchaka":{
+		"cl":"v",
+		"pr":["DITR"],
+		"tr":["to take from, to take away"]
 	}
 }
