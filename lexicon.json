@@ -232,5 +232,11 @@
 		"cl":"v",
 		"pr":["DITR"],
 		"tr":["to take from, to take away"]
+	},
+
+	"watara":{
+		"cl":"v",
+		"pr":["INTR"],
+		"tr":["to go","to turn into, to become (with predicate in TRANS)"]
 	}
 }
