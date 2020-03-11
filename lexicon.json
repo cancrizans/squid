@@ -238,5 +238,17 @@
 		"cl":"v",
 		"pr":["INTR"],
 		"tr":["to go","to turn into, to become (with predicate in TRANS)"]
+	},
+
+	"barahanta":{
+		"cl":"n",
+		"pr":["M","SING"],
+		"tr":"day"
+	},
+
+	"bayara":{
+		"cl":"n",
+		"pr":["M","MASS"],
+		"tr":"motivation, reason"
 	}
 }
