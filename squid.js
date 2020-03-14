@@ -1,12 +1,24 @@
+
+
+var tH = "˦";
+var tL = "˨";
+var tM = "˧";
+
+var matchL = new RegExp(tL);
+var matchMH = new RegExp(tM+"|"+tH);
+var matchH = new RegExp(tH);
+var matchM = new RegExp(tM);
+var matchLM = new RegExp(tL+"|"+tM);
+
 var toneSequences = {
-	'H': "˥",
-	'L': "˩",
-	'R': "˩˥",
-	'F': "˥˩",
-	'P': "˩˥˧",
-	'D': "˥˩˧",
-	'T': "˥˩˧˩",
-	'J': "˩˥˧˥"
+	'H': tH,
+	'L': tL,
+	'R': tL+tH,
+	'F': tH+tL,
+	'P': tL+tH+tM,
+	'D': tH+tL+tM,
+	'T': tH+tL+tM+tL,
+	'J': tL+tH+tM+tH
 }
 
 var tonesLetters = Object.keys(toneSequences);
@@ -105,6 +117,8 @@ function asciilitize(text){
 		}
 
 		w = w.replace(vowelNormalise,"a");
+
+		w = w.replace(/aa/g,"a");
 		
 		outwords.push(T+w);
 	}
@@ -113,6 +127,8 @@ function asciilitize(text){
 
 	return outwords.join(" ");
 }
+
+
 
 
 var tonesPattern = "([P|D|R|F|T|J|H|L])";
@@ -209,7 +225,7 @@ function toIPA(text){
 
 	outwords = [];
 
-	V = "ə"
+	V = ""
 
 	for (let w of words){
 		let m = w.match(/^((?:H|L|R|F|P|D|J|T)?)(.*)$/);
@@ -292,6 +308,7 @@ function tonify(word,tone){
 
 
 
+
 function applyToneRomanise(word,tone){
 	
 
@@ -306,13 +323,13 @@ function applyToneRomanise(word,tone){
 												return "u";
 										}
 										if(["sh","ch"].includes(c)){
-											return p.replace(/˧|˥/,"i").replace(/˩/,"e");
+											return p.replace(matchMH,"i").replace(matchL,"e");
 										}
 										if(["ṣh","ẓh"].includes(c)){
-											return p.replace(/˧/,"e").replace(/˩/,"o").replace(/˥/,"e");
+											return p.replace(matchM,"e").replace(matchL,"o").replace(matchH,"e");
 										}
 
-										return p.replace(/˧/,"e").replace(/˩/,"o").replace(/˥/,"a");
+										return p.replace(matchM,"e").replace(matchL,"o").replace(matchH,"a");
 									}
 
 		);

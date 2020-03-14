@@ -250,5 +250,42 @@
 		"cl":"n",
 		"pr":["M","MASS"],
 		"tr":"motivation, reason"
+	},
+
+	"ṇasawakara":{
+		"cl":"n",
+		"pr":["M","SING"],
+		"tr":["cranium, upper portion of head","a smart person"]
+	},
+
+	"kaṇata":{
+		"cl":"n",
+		"pr":["F","COLL"],
+		"tr":"apples"
+	},
+
+	"tsaha":{
+		"cl":"n",
+		"pr":["F","SING"],
+		"tr":"tongue (organ)"
+	},
+
+	"tarabara":{
+		"cl":"n",
+		"pr":["F","COLL"],
+		"tr":"gifts"
+	},
+
+	"haċha":{
+		"cl":"n",
+		"pr":["M","COLL"],
+		"tr":"mountains"
+	},
+
+	"pappaka":{
+		"cl":"n",
+		"pr":["M","COLL"],
+		"tr":"wolves"
 	}
+
 }
