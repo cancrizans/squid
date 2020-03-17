@@ -340,7 +340,7 @@ li {
 	font-weight: 400;
 }
 
-.ipa, .pronunciation {
+.ipa, .pronunciation, .unicode_font {
 	
 	font-family: sans-serif;
 }
