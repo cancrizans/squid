@@ -186,6 +186,12 @@
 		"tr":["to look at, to stare at","to desire, to consider acquiring"]
 	},
 
+	"battasa":{
+		"cl":"v",
+		"pr":["SHIFT-TR"],
+		"tr":"to see"
+	},
+
 	"nyahatsa":{
 		"cl":"adj",
 		"pr":[],
