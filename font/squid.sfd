@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1582197146
-ModificationTime: 1585871218
+ModificationTime: 1585903521
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -61,7 +61,7 @@ KernClass2: 20 15 "kern-1-sub"
  3 d t
  33 S Z s z Agrave Aacute Acircumflex
  3 w y
- 7 b p Eth
+ 3 b p
  24 r Ccedilla Egrave Eacute
  1 n
  3 C E
@@ -69,7 +69,7 @@ KernClass2: 20 15 "kern-1-sub"
  16 Edieresis Igrave
  10 X x Ograve
  5 F P R
- 18 Idieresis aring ae
+ 22 Idieresis Eth aring ae
  1 h
  11 quotesingle
  6 eacute
@@ -77,20 +77,20 @@ KernClass2: 20 15 "kern-1-sub"
  1 m
  6 ntilde
  20 d t Edieresis Igrave
- 25 K N X g k x Ograve Oacute
+ 27 K N c e g k x Ograve Oacute
  13 w y Idieresis
  29 S s Agrave Aacute Acircumflex
  7 b p Eth
- 8 m ntilde
- 8 Ccedilla
- 6 Egrave
- 6 Eacute
+ 0 
+ 15 Ccedilla agrave
+ 13 Egrave aacute
+ 18 Eacute acircumflex
  5 F P R
- 1 n
+ 10 m n ntilde
  1 h
- 22 C E Adieresis aring ae
+ 24 C E X Adieresis aring ae
  25 Z r z Atilde Oslash Thorn
- 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -80 {} -66 {} -106 {} -156 {} -94 {} -143 {} 0 {} 0 {} -53 {} -67 {} -133 {} -160 {} -27 {} -120 {} 0 {} -80 {} -120 {} -40 {} -147 {} -107 {} -197 {} 0 {} 0 {} 0 {} -93 {} -187 {} -187 {} -133 {} -40 {} 0 {} -50 {} -108 {} -70 {} 0 {} -120 {} -50 {} -40 {} 10 {} 0 {} 0 {} -213 {} -40 {} -107 {} -53 {} 0 {} -67 {} -133 {} -27 {} -83 {} 0 {} -80 {} 0 {} 0 {} 0 {} -53 {} -67 {} -66 {} 0 {} 0 {} 0 {} -37 {} -120 {} -9 {} -101 {} 0 {} -70 {} 0 {} 0 {} 0 {} 0 {} -67 {} -133 {} 0 {} -53 {} 0 {} -26 {} -120 {} -43 {} -14 {} -133 {} -87 {} 0 {} -13 {} 0 {} -40 {} -253 {} -27 {} -53 {} -40 {} 0 {} -40 {} -133 {} -40 {} -40 {} -153 {} -177 {} -3 {} -33 {} -173 {} 0 {} -187 {} -67 {} -67 {} -80 {} 0 {} -26 {} -93 {} 0 {} -40 {} 0 {} -70 {} 0 {} 0 {} 0 {} -40 {} -53 {} -40 {} 0 {} -27 {} 0 {} -27 {} -53 {} 0 {} -54 {} 0 {} -20 {} 120 {} 0 {} -93 {} 13 {} -40 {} -40 {} -40 {} 53 {} 0 {} -170 {} -230 {} -67 {} -147 {} -93 {} -127 {} 0 {} 0 {} -93 {} -147 {} -147 {} -160 {} -67 {} -120 {} 0 {} -40 {} -80 {} -20 {} 0 {} -93 {} -93 {} 67 {} 0 {} 0 {} -27 {} -173 {} -53 {} -93 {} -27 {} 0 {} -53 {} -133 {} -30 {} 0 {} -27 {} 0 {} 0 {} 0 {} 0 {} 0 {} -200 {} 0 {} -27 {} 0 {} 0 {} -20 {} -17 {} 0 {} 40 {} 0 {} -40 {} 220 {} 0 {} 0 {} -50 {} -30 {} -40 {} 0 {} -13 {} 0 {} -40 {} -133 {} -13 {} -40 {} -133 {} -40 {} -27 {} 13 {} 0 {} -27 {} -93 {} -40 {} -107 {} -27 {} 0 {} 13 {} -53 {} 0 {} -14 {} -10 {} 0 {} 0 {} 0 {} 0 {} 0 {} -243 {} -10 {} 0 {} 0 {} 0 {} 0 {} -280 {} -93 {} -80 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -147 {} -80 {} 0 {} -67 {} 0 {} 0 {} 0 {} 0 {} 0 {} -110 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -103 {} 0 {} 0 {} 0 {} -66 {} 0 {} 0 {} 0 {} -13 {} 0 {} -67 {} -27 {} 0 {} 0 {} -67 {} 0 {} -27 {} 0 {} 27 {} 0 {} 67 {} -13 {} 80 {} 67 {} 227 {} -13 {} 0 {} 0 {} 80 {} 0 {} 53 {} 0 {}
+ 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -27 {} -146 {} -13 {} -89 {} 13 {} -10 {} 133 {} 0 {} -53 {} -67 {} -146 {} -13 {} -27 {} -67 {} 0 {} -80 {} -120 {} -40 {} -147 {} -107 {} -197 {} 0 {} 0 {} 0 {} -93 {} -187 {} -187 {} -133 {} -40 {} 0 {} -50 {} -108 {} -70 {} 0 {} -120 {} -50 {} -40 {} 10 {} 0 {} 0 {} -200 {} -40 {} -107 {} -53 {} 0 {} -67 {} -133 {} -27 {} -83 {} 0 {} -80 {} 0 {} 0 {} 0 {} -53 {} -67 {} -66 {} 0 {} 0 {} 0 {} -37 {} -120 {} -9 {} -101 {} 0 {} -70 {} 0 {} 0 {} 0 {} 0 {} -67 {} -106 {} 0 {} -53 {} 0 {} -26 {} -120 {} -43 {} -14 {} -133 {} -87 {} 0 {} -13 {} 0 {} -40 {} -253 {} -27 {} -53 {} -40 {} 0 {} -40 {} -133 {} -40 {} -40 {} -153 {} -177 {} -3 {} -33 {} -173 {} 0 {} -187 {} -67 {} -67 {} -80 {} 0 {} -26 {} -93 {} 0 {} -40 {} 0 {} -70 {} 0 {} 0 {} 0 {} -40 {} -53 {} -40 {} 0 {} -27 {} 0 {} -27 {} -53 {} 0 {} -54 {} 0 {} -20 {} 120 {} 0 {} -93 {} 13 {} -40 {} -40 {} -40 {} 53 {} 0 {} -170 {} -230 {} -67 {} -147 {} -93 {} -127 {} 0 {} 0 {} -93 {} -147 {} -147 {} -160 {} -67 {} -120 {} 0 {} -40 {} -80 {} -20 {} 0 {} -93 {} -93 {} 67 {} 0 {} 0 {} -27 {} -173 {} -53 {} -93 {} -27 {} 0 {} -53 {} -133 {} -30 {} 0 {} -27 {} 0 {} 0 {} 0 {} 0 {} 0 {} -200 {} 0 {} -27 {} 0 {} 0 {} -20 {} -17 {} 0 {} 40 {} 0 {} -40 {} 220 {} 0 {} 0 {} -50 {} -30 {} -40 {} 0 {} -13 {} 0 {} -40 {} -133 {} -13 {} -40 {} -133 {} -40 {} -27 {} 13 {} 0 {} -27 {} -93 {} -40 {} -107 {} -27 {} 0 {} 13 {} -53 {} 0 {} -14 {} -10 {} 0 {} 0 {} 0 {} 0 {} 0 {} -243 {} -10 {} 0 {} 0 {} 0 {} 0 {} -280 {} -93 {} -80 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -374 {} -80 {} 0 {} -67 {} 0 {} 0 {} 0 {} 0 {} 0 {} -110 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} 0 {} -103 {} 0 {} 0 {} 0 {} -66 {} 0 {} 0 {} 0 {} -13 {} 0 {} -67 {} -27 {} 0 {} 0 {} -67 {} 0 {} -27 {} 0 {} 27 {} 0 {} 67 {} -13 {} 80 {} 67 {} 227 {} -13 {} 0 {} 0 {} 80 {} 0 {} 53 {} 0 {}
 ChainSub2: class "'calt' ' to low connecting '-1" 3 3 3 1
   Class: 11 quotesingle
   Class: 36 C E b p Adieresis Eth Thorn aring ae
@@ -127,11 +127,11 @@ ChainSub2: class "calt ' to connecting '-1" 3 3 3 1
 EndFPST
 ChainSub2: class "'calt' Alternative contestuali in Latino lookup 6-1" 3 3 3 1
   Class: 7 r Thorn
-  Class: 62 C E K N b g k p w y Edieresis Igrave Idieresis Oacute aring ae
+  Class: 49 C E X b p w y Edieresis Igrave Idieresis aring ae
   BClass: 7 r Thorn
-  BClass: 62 C E K N b g k p w y Edieresis Igrave Idieresis Oacute aring ae
+  BClass: 49 C E X b p w y Edieresis Igrave Idieresis aring ae
   FClass: 7 r Thorn
-  FClass: 62 C E K N b g k p w y Edieresis Igrave Idieresis Oacute aring ae
+  FClass: 49 C E X b p w y Edieresis Igrave Idieresis aring ae
  1 1 0
   ClsList: 1
   BClsList: 2
@@ -161,11 +161,11 @@ ChainSub2: class "'calt' Alternative contestuali in Latino lookup 4-1" 3 3 3 1
 EndFPST
 ChainSub2: class "'calt' r to low stem r-1" 3 3 3 1
   Class: 7 r Thorn
-  Class: 17 S s x Acircumflex
+  Class: 36 K N S c e g k s x Acircumflex Oacute
   BClass: 7 r Thorn
-  BClass: 17 S s x Acircumflex
+  BClass: 36 K N S c e g k s x Acircumflex Oacute
   FClass: 7 r Thorn
-  FClass: 17 S s x Acircumflex
+  FClass: 36 K N S c e g k s x Acircumflex Oacute
  1 1 0
   ClsList: 1
   BClsList: 2
@@ -182,7 +182,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 51 18
+WinInfo: 0 38 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -199,7 +199,7 @@ Grid
  2000 354 l 1024
   Named: "lowerCircleHeight"
 EndSplineSet
-BeginChars: 256 76
+BeginChars: 256 77
 
 StartChar: K
 Encoding: 75 75 0
@@ -314,14 +314,29 @@ StartChar: w
 Encoding: 119 119 5
 Width: 463
 VWidth: 0
+UnlinkRmOvrlpSave: 1
 Flags: W
-HStem: -268 50<218.284 289.974> -25 50<167.568 315.006> 329 50<162.184 306.534> 598.6 50<188.519 332.47>
-VStem: 35 61<100.899 259.79 323.108 461.733> 337.013 57.9746<-154.392 -111.886> 371 60<84.7453 262.514>
+HStem: -175.386 46.7705<132.432 155.613> -25 50<167.568 315.006> 329 50<162.184 306.534> 598.6 50<188.519 332.47>
+VStem: 35 61<100.899 259.79 323.108 461.733> 207.054 59.8926<-35.1616 -1.49707> 371 60<84.7453 262.514>
 LayerCount: 2
 Fore
+SplineSet
+239 -38 m 1
+ 267.9921875 -44.42578125 l 1
+ 245.03125 -116.364257812 188.755859375 -158.64453125 135.606445312 -175.385742188 c 1
+ 125 -152 l 1
+ 114.393554688 -128.615234375 l 1
+ 149.828125 -117.454101562 191.96875 -88.09375 210.0078125 -31.57421875 c 1
+ 239 -38 l 1
+346 -182 m 1
+ 329.684570312 -202.979492188 l 1
+ 264.229492188 -167.630859375 214.825195312 -109.424804688 207.053710938 -1.4970703125 c 1
+ 237 0 l 1
+ 266.946289062 1.4970703125 l 1
+ 273.852539062 -94.4228515625 312.114257812 -133.909179688 362.315429688 -161.020507812 c 1
+ 346 -182 l 1
+EndSplineSet
 Refer: 4 121 N 1 0 0 1 0 0 2
-Refer: 13 166 S 1 0 0 1 14 -356 2
-Validated: 1
 EndChar
 
 StartChar: t
@@ -379,7 +394,7 @@ VStem: 49 60<391.451 558.699> 240 60<32.8662 316> 399 60<-104.572 51.6226> 441 6
 LayerCount: 2
 Fore
 Refer: 3 83 N 1 0 0 1 0 0 2
-Refer: 72 198 N 1 0 0 1 0 0 2
+Refer: 71 198 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: macron
@@ -550,7 +565,7 @@ HStem: 293 50<160.907 394.161> 611 50<164.671 389.112>
 VStem: 49 60<391.451 558.699> 441 60<387.498 560.838>
 LayerCount: 2
 Fore
-Refer: 60 216 S 1 0 0 1 0 -43 2
+Refer: 59 216 S 1 0 0 1 0 -43 2
 EndChar
 
 StartChar: Aacute
@@ -640,7 +655,7 @@ Encoding: 195 195 21
 Width: 544
 VWidth: 0
 UnlinkRmOvrlpSave: 1
-Flags: WO
+Flags: W
 HStem: 35.0762 50<153.976 261.498> 194.076 50<151.245 296.078 353.502 419.546> 293 50<160.907 394.161> 611 50<164.671 389.112>
 VStem: 49 60<391.451 558.699> 79.6094 60<99.1237 181.287> 296.078 60.2705<122.771 194.279> 441 60<387.498 560.838>
 LayerCount: 2
@@ -761,7 +776,7 @@ VStem: 366.69 59.0879<550.35 620.286> 434 60<37.4283 193.623>
 LayerCount: 2
 Fore
 Refer: 24 110 N 1 0 0 1 0 0 2
-Refer: 72 198 N 1 0 0 1 35 142 2
+Refer: 71 198 N 1 0 0 1 35 142 2
 EndChar
 
 StartChar: r
@@ -787,7 +802,7 @@ SplineSet
  44 372.553710938 77.3271484375 402.40234375 97.21484375 435.258789062 c 1
  124 424 l 1xf6
 EndSplineSet
-Refer: 60 216 N 1 0 0 1 0 0 2
+Refer: 59 216 N 1 0 0 1 0 0 2
 Substitution2: "r to low tail r-1" Ccedilla
 Substitution2: "r to branch stem r-1" Egrave
 Substitution2: "r to rising stem r-1" Eacute
@@ -834,8 +849,8 @@ HStem: 205 50<-245 -47.5793> 336 50<160.907 394.161> 654 50<164.671 389.112>
 VStem: 49 60<434.451 601.699> 51 54<378.562 524> 441 60<430.498 603.838>
 LayerCount: 2
 Fore
-Refer: 60 216 N 1 0 0 1 0 0 2
-Refer: 73 250 N 1 0 0 1 0 0 2
+Refer: 59 216 N 1 0 0 1 0 0 2
+Refer: 72 250 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Egrave
@@ -848,8 +863,8 @@ HStem: 336 50<160.907 394.161> 379 50<-46.2989 28.9296> 654 50<164.671 389.112>
 VStem: 49 60<434.451 601.699> 54 52<455.044 551> 441 60<430.498 603.838>
 LayerCount: 2
 Fore
-Refer: 60 216 N 1 0 0 1 0 0 2
-Refer: 74 251 N 1 0 0 1 0 0 2
+Refer: 59 216 N 1 0 0 1 0 0 2
+Refer: 73 251 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: Eacute
@@ -862,8 +877,8 @@ HStem: 225.322 301.678 336 50<160.907 394.161> 654 50<164.671 389.112>
 VStem: 49 60<434.451 601.699> 52 57<393.687 527> 441 60<430.498 603.838>
 LayerCount: 2
 Fore
-Refer: 60 216 N 1 0 0 1 0 0 2
-Refer: 75 252 N 1 0 0 1 0 0 2
+Refer: 59 216 N 1 0 0 1 0 0 2
+Refer: 74 252 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: period
@@ -887,20 +902,15 @@ EndChar
 
 StartChar: c
 Encoding: 99 99 32
-Width: 1000
+Width: 770
 VWidth: 0
-HStem: 146 252<259.135 354.865>
-VStem: 221 172<189.375 354.625>
+Flags: W
+HStem: 27 50<299.289 444.823> 308 50<481.763 630.237> 329.095 50<274.889 409.45> 566 50<481.763 630.237> 612.4 20G<241.497 290.469>
+VStem: 260.938 59.0625<549.145 624.643> 373 60<411.517 519.206> 524 60<165.271 339> 679 60<404.794 519.206>
 LayerCount: 2
 Fore
-SplineSet
-221 272 m 4
- 221 342 260 398 307 398 c 4
- 354 398 393 342 393 272 c 4
- 393 202 354 146 307 146 c 4
- 260 146 221 202 221 272 c 4
-EndSplineSet
-Validated: 1
+Refer: 54 205 N 1 0 0 1 0 0 2
+Refer: 55 206 S 1 0 0 1 21 -12 2
 EndChar
 
 StartChar: Z
@@ -932,13 +942,14 @@ StartChar: E
 Encoding: 69 69 35
 Width: 463
 VWidth: 0
+UnlinkRmOvrlpSave: 1
 Flags: W
-HStem: -343.048 252.521 -25 50<150.994 298.432> 329 50<159.466 303.816> 598.6 50<133.53 277.481>
-VStem: 35 60<84.7453 262.514> 184.896 58.1035<-139.724 -101.497> 266 58.9824<-232.388 -170.082> 370 61<100.899 259.79 323.108 461.733>
+HStem: -318 50<127.552 216.767> -25 50<150.994 298.432> 329 50<159.466 303.816> 598.6 50<133.53 277.481>
+VStem: 35 60<84.7453 262.514> 61 60<-261.119 -185.175> 275 60<-55.7277 26.4209> 370 61<100.899 259.79 323.108 461.733>
 LayerCount: 2
 Fore
-Refer: 22 196 N 1 0 0 1 0 0 2
-Refer: 11 165 S 1 0 0 1 58 -385 2
+Refer: 34 67 N 1 0 0 1 0 0 2
+Refer: 75 219 S 1 0 0 1 -227 -327 2
 EndChar
 
 StartChar: D
@@ -1311,11 +1322,11 @@ VWidth: 0
 UnlinkRmOvrlpSave: 1
 Flags: W
 HStem: 27 50<299.289 444.823> 308 50<481.763 630.237> 329.095 50<274.889 409.45> 566 50<481.763 630.237> 612.4 20G<241.497 290.469>
-VStem: 260.938 59.0625<549.145 624.643> 373 60<411.517 519.206> 524 60<165.271 339> 679 60<404.794 519.206>
+VStem: 260.938 59.0625<549.145 624.643> 373 60<411.517 519.206> 524 60<165.271 339> 649 60<-78.572 77.6226> 679 60<404.794 519.206>
 LayerCount: 2
 Fore
-Refer: 54 205 N 1 0 0 1 0 0 2
-Refer: 55 206 S 1 0 0 1 21 -12 2
+Refer: 32 99 N 1 0 0 1 0 0 2
+Refer: 71 198 S 1 0 0 1 250 26 2
 EndChar
 
 StartChar: Iacute
@@ -1384,30 +1395,16 @@ EndChar
 
 StartChar: X
 Encoding: 88 88 56
-Width: 770
+Width: 567
 VWidth: 0
 UnlinkRmOvrlpSave: 1
 Flags: W
-HStem: 9 50<354.552 443.767> 308 50<481.763 630.237> 329.095 50<274.889 409.45> 566 50<481.763 630.237> 612.4 20G<241.497 290.469>
-VStem: 260.938 59.0625<549.145 624.643> 288 60<65.8814 141.825> 373 60<411.517 519.206> 502 60<271.272 353.421> 679 60<404.794 519.206>
+HStem: -25 50<150.994 298.432> 329 50<159.466 303.816> 598.6 50<133.53 277.481>
+VStem: 35 60<84.7453 262.514> 370 61<100.899 259.79 323.108 461.733> 473 60<-192.572 -36.3774>
 LayerCount: 2
 Fore
-SplineSet
-502.0078125 353.420898438 m 1x83c0
- 561.9921875 354.578125 l 1
- 563.01171875 317.880859375 562 297.475585938 562 262 c 0
- 562 257.8046875 561.9453125 253.616210938 561.8359375 249.439453125 c 0
- 558.924804688 138.094726562 516.006835938 9 392 9 c 0
- 331.91015625 9 288 47.517578125 288 113 c 0
- 288 216.877929688 469.874023438 244.395507812 494.720703125 271.014648438 c 0
- 499.864257812 276.525390625 502 281.171875 502 288 c 0
- 502.0078125 353.420898438 l 1x83c0
-498.814453125 209.986328125 m 1
- 421.49609375 171.15625 348 150.7265625 348 105 c 3
- 348 68.9861137893 377 59 392 59 c 3
- 443.446289062 59 486.543945312 114.490234375 498.814453125 209.986328125 c 1
-EndSplineSet
-Refer: 54 205 N 1 0 0 1 0 0 2
+Refer: 34 67 N 1 0 0 1 0 0 2
+Refer: 71 198 N 1 0 0 1 74 -88 2
 EndChar
 
 StartChar: Idieresis
@@ -1421,43 +1418,28 @@ VStem: 35 61<100.899 259.79 323.108 461.733> 371 60<84.7453 262.514> 523 60<-67 
 LayerCount: 2
 Fore
 Refer: 4 121 N 1 0 0 1 0 0 2
-Refer: 68 218 N 1 0 0 1 0 0 2
+Refer: 67 218 N 1 0 0 1 0 0 2
 LCarets2: 1 0
 Ligature2: "multigraphs-1" t period
 EndChar
 
 StartChar: Eth
 Encoding: 208 208 58
-Width: 533
-VWidth: 0
-Flags: W
-HStem: -319.048 252.521 -25 50<139.894 397.327> 359 20<235.5 295.5> 540 50<48.5 266.644>
-VStem: 16.5 60<83.7849 270.255> 193.396 58.1035<-115.724 -77.4974> 235.5 60<359 562> 274.5 58.9824<-208.388 -146.082> 456.5 60<82.9305 272.783>
-LayerCount: 2
-Fore
-Refer: 9 98 N 1 0 0 1 0 0 2
-Refer: 11 165 S 1 0 0 1 66.5 -361 2
-LCarets2: 1 0
-Ligature2: "multigraphs-1" p period
-EndChar
-
-StartChar: Ograve
-Encoding: 210 210 59
-Width: 770
+Width: 687
 VWidth: 0
 UnlinkRmOvrlpSave: 1
 Flags: W
-HStem: -265.048 252.521 27 50<299.289 444.823> 308 50<481.763 630.237> 329.095 50<274.889 409.45> 566 50<481.763 630.237> 612.4 20G<241.497 290.469>
-VStem: 260.938 59.0625<549.145 624.643> 305.896 58.1035<-61.7238 -23.4974> 373 60<411.517 519.206> 387 58.9824<-154.388 -92.0816> 524 60<165.271 339> 679 60<404.794 519.206>
+HStem: -25 50<139.894 397.327> 215.5 49<478.265 535.032> 359 20<235.5 295.5> 540 50<48.5 266.644>
+VStem: 16.5 60<83.7849 270.255> 235.5 60<359 562> 456.5 60<82.9305 272.783> 589 60<-52 430>
 LayerCount: 2
 Fore
-Refer: 53 120 N 1 0 0 1 0 0 2
-Refer: 11 165 S 1 0 0 1 179 -307 2
-Ligature2: "multigraphs-1" x period
+Refer: 9 98 S 1 0 0 1 0 0 2
+Refer: 67 218 S 1 0 0 1 66 15 2
+Ligature2: "multigraphs-1" p period
 EndChar
 
 StartChar: Oslash
-Encoding: 216 216 60
+Encoding: 216 216 59
 Width: 544
 VWidth: 0
 UnlinkRmOvrlpSave: 1
@@ -1481,7 +1463,7 @@ EndSplineSet
 EndChar
 
 StartChar: Oacute
-Encoding: 211 211 61
+Encoding: 211 211 60
 Width: 610
 VWidth: 0
 UnlinkRmOvrlpSave: 1
@@ -1491,13 +1473,13 @@ VStem: 305 60<-91 391> 440 60<273.472 499>
 LayerCount: 2
 Fore
 Refer: 0 75 N 1 0 0 1 0 0 2
-Refer: 68 218 S 1 0 0 1 -218 -24 2
+Refer: 67 218 S 1 0 0 1 -218 -24 2
 LCarets2: 1 0
 Ligature2: "multigraphs-1" k period
 EndChar
 
 StartChar: agrave
-Encoding: 224 224 62
+Encoding: 224 224 61
 Width: 544
 VWidth: 0
 UnlinkRmOvrlpSave: 1
@@ -1515,15 +1497,15 @@ SplineSet
  110.37890625 613.756835938 107 598 104 519 c 1
  76 521 l 1xe8
 EndSplineSet
-Refer: 73 250 N 1 0 0 1 0 0 2
-Refer: 63 223 N 1 0 0 1 103 0 2
+Refer: 72 250 N 1 0 0 1 0 0 2
+Refer: 62 223 N 1 0 0 1 103 0 2
 EndChar
 
 StartChar: germandbls
-Encoding: 223 223 63
+Encoding: 223 223 62
 Width: 337
 VWidth: 0
-Flags: WO
+Flags: W
 HStem: 351.754 46.9531<89.5791 115.705> 614.163 49.6738<94.4589 177.324>
 VStem: 223 60<100.634 250.711> 245 60<422.317 559.317>
 LayerCount: 2
@@ -1548,7 +1530,7 @@ EndSplineSet
 EndChar
 
 StartChar: aacute
-Encoding: 225 225 64
+Encoding: 225 225 63
 Width: 567
 VWidth: 0
 UnlinkRmOvrlpSave: 1
@@ -1566,12 +1548,12 @@ SplineSet
  123.96484375 629.161132812 109 599 105 548 c 13
  78 549 l 1x18
 EndSplineSet
-Refer: 74 251 N 1 0 0 1 0 0 2
-Refer: 63 223 N 1 0 0 1 134 0 2
+Refer: 73 251 N 1 0 0 1 0 0 2
+Refer: 62 223 N 1 0 0 1 134 0 2
 EndChar
 
 StartChar: acircumflex
-Encoding: 226 226 65
+Encoding: 226 226 64
 Width: 544
 VWidth: 0
 UnlinkRmOvrlpSave: 1
@@ -1591,21 +1573,21 @@ SplineSet
  111.174804688 552.135742188 110.25 539.342773438 109.997070312 524.641601562 c 1
  80 525 l 1x18
 EndSplineSet
-Refer: 75 252 N 1 0 0 1 0 0 2
-Refer: 63 223 N 1 0 0 1 121 0 2
+Refer: 74 252 N 1 0 0 1 0 0 2
+Refer: 62 223 N 1 0 0 1 121 0 2
 EndChar
 
 StartChar: Thorn
-Encoding: 222 222 66
+Encoding: 222 222 65
 Width: 337
 VWidth: 0
 UnlinkRmOvrlpSave: 1
-Flags: WO
+Flags: W
 HStem: 351.754 46.9531<89.5791 115.705> 614.163 49.6738<94.4589 177.324>
 VStem: 223 60<100.634 250.711> 245 60<422.317 559.317>
 LayerCount: 2
 Fore
-Refer: 63 223 N 1 0 0 1 0 0 2
+Refer: 62 223 N 1 0 0 1 0 0 2
 LCarets2: 1 0
 Ligature2: "multigraphs-1" n period
 Substitution2: "r to low tail r-1" agrave
@@ -1614,7 +1596,7 @@ Substitution2: "r to rising stem r-1" acircumflex
 EndChar
 
 StartChar: aring
-Encoding: 229 229 67
+Encoding: 229 229 66
 Width: 637
 VWidth: 0
 UnlinkRmOvrlpSave: 1
@@ -1624,12 +1606,12 @@ VStem: 35 60<84.7453 262.514> 370 61<100.899 259.79 323.108 461.733> 523 60<-67 
 LayerCount: 2
 Fore
 Refer: 34 67 N 1 0 0 1 0 0 2
-Refer: 68 218 N 1 0 0 1 0 0 2
+Refer: 67 218 N 1 0 0 1 0 0 2
 Ligature2: "multigraphs-1" C period
 EndChar
 
 StartChar: Uacute
-Encoding: 218 218 68
+Encoding: 218 218 67
 Width: 622
 VWidth: 0
 UnlinkRmOvrlpSave: 1
@@ -1657,7 +1639,7 @@ EndSplineSet
 EndChar
 
 StartChar: ae
-Encoding: 230 230 69
+Encoding: 230 230 68
 Width: 637
 VWidth: 0
 Flags: W
@@ -1665,13 +1647,13 @@ HStem: -338.048 252.521 -25 50<150.994 298.432> 200.5 49<412.265 469.032> 329 50
 VStem: 35 60<84.7453 262.514> 236.896 58.1035<-134.724 -96.4974> 318 58.9824<-227.388 -165.082> 370 61<100.899 259.79 323.108 461.733> 523 60<-67 415>
 LayerCount: 2
 Fore
-Refer: 67 229 N 1 0 0 1 0 0 2
+Refer: 66 229 N 1 0 0 1 0 0 2
 Refer: 11 165 S 1 0 0 1 110 -380 2
 Ligature2: "multigraphs-1" E period
 EndChar
 
 StartChar: eacute
-Encoding: 233 233 70
+Encoding: 233 233 69
 Width: 318
 VWidth: 0
 UnlinkRmOvrlpSave: 1
@@ -1699,7 +1681,7 @@ EndSplineSet
 EndChar
 
 StartChar: ecircumflex
-Encoding: 234 234 71
+Encoding: 234 234 70
 Width: 318
 VWidth: 0
 Flags: W
@@ -1707,11 +1689,11 @@ HStem: 262 50<256.822 317.148>
 VStem: 15.8623 301.286
 LayerCount: 2
 Fore
-Refer: 70 233 S 1 0 0 1 0 -225 2
+Refer: 69 233 S 1 0 0 1 0 -225 2
 EndChar
 
 StartChar: AE
-Encoding: 198 198 72
+Encoding: 198 198 71
 Width: 544
 VWidth: 0
 Flags: W
@@ -1732,7 +1714,7 @@ EndSplineSet
 EndChar
 
 StartChar: uacute
-Encoding: 250 250 73
+Encoding: 250 250 72
 Width: 544
 VWidth: 0
 Flags: W
@@ -1753,7 +1735,7 @@ EndSplineSet
 EndChar
 
 StartChar: ucircumflex
-Encoding: 251 251 74
+Encoding: 251 251 73
 Width: 567
 VWidth: 0
 Flags: W
@@ -1774,7 +1756,7 @@ EndSplineSet
 EndChar
 
 StartChar: udieresis
-Encoding: 252 252 75
+Encoding: 252 252 74
 Width: 544
 VWidth: 0
 Flags: W
@@ -1791,6 +1773,46 @@ SplineSet
  13.5771484375 348.002929688 52 380.021484375 52 527 c 1
  82 527 l 1
 EndSplineSet
+EndChar
+
+StartChar: Ucircumflex
+Encoding: 219 219 75
+Width: 770
+VWidth: 0
+Flags: W
+HStem: 9 50<354.552 443.767>
+VStem: 288 60<65.8814 141.825> 502 60<271.272 353.421>
+LayerCount: 2
+Fore
+SplineSet
+502.0078125 353.420898438 m 5
+ 561.9921875 354.578125 l 5
+ 563.01171875 317.880859375 562 297.475585938 562 262 c 4
+ 562 257.8046875 561.9453125 253.616210938 561.8359375 249.439453125 c 4
+ 558.924804688 138.094726562 516.006835938 9 392 9 c 4
+ 331.91015625 9 288 47.517578125 288 113 c 4
+ 288 216.877929688 469.874023438 244.395507812 494.720703125 271.014648438 c 4
+ 499.864257812 276.525390625 502 281.171875 502 288 c 4
+ 502.0078125 353.420898438 l 5
+498.814453125 209.986328125 m 5
+ 421.49609375 171.15625 348 150.7265625 348 105 c 7
+ 348 68.9861137893 377 59 392 59 c 7
+ 443.446289062 59 486.543945312 114.490234375 498.814453125 209.986328125 c 5
+EndSplineSet
+EndChar
+
+StartChar: e
+Encoding: 101 101 76
+Width: 770
+VWidth: 0
+UnlinkRmOvrlpSave: 1
+Flags: W
+HStem: 9 50<354.552 443.767> 308 50<481.763 630.237> 329.095 50<274.889 409.45> 566 50<481.763 630.237> 612.4 20G<241.497 290.469>
+VStem: 260.938 59.0625<549.145 624.643> 288 60<65.8814 141.825> 373 60<411.517 519.206> 502 60<271.272 353.421> 679 60<404.794 519.206>
+LayerCount: 2
+Fore
+Refer: 54 205 N 1 0 0 1 0 0 2
+Refer: 75 219 N 1 0 0 1 0 0 2
 EndChar
 EndChars
 EndSplineFont
