@@ -182,6 +182,7 @@ function toIPA(text){
 	
 
 	text = text.replace(/-/g,"")
+				.replace(/n(t|c|ċ)/g,"ⁿ$1")
 				.replace(/mm/g,"mː")
 				.replace(/nny/g,"ɲː")
 				.replace(/nn/g,"nː")
