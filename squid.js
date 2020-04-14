@@ -76,19 +76,50 @@ var precomposed_accented = {
 	"Ju":"ũ",
 	"Pu":"û",
 
+
 }
+
+var	diacritic = {
+		"F":"\u0300",
+		"R":"\u0301",
+		"D":"\u030C",
+		"P":"\u0302",
+		"H":"\u0304",
+		"L":"\u0307",
+		"T":"\u030f",
+		"J":"\u0303"
+	}
+
+console.log(diacritic.D);
+
+var precomposed_syllabic = {}
+
+for(let s of ["m","n","ṇ","r"]){
+	for (let T of tonesLetters){
+		precomposed_syllabic[T+s] = s+diacritic[T];
+	}
+}
+
+var precomposed_accented_all = Object.assign({},precomposed_syllabic,precomposed_accented);
+
+console.log(precomposed_accented_all);
 
 var unaccented = ["a","e","i","o","u"];
 
 var deAccentRegexpes = {};
 
 for (let T of tonesLetters){
-	deAccentRegexpes[T] = new RegExp("["+unaccented.map(v=>precomposed_accented[T+v]).join("|")+"]", "i" );
+	deAccentRegexpes[T] = new RegExp("["+unaccented.map(v=>precomposed_accented_all[T+v]).join("|")+"]", "i" );
 }
 
 
+var vowelNormalisers = {}
+for(let v of unaccented){
+	vowelNormalisers[v] = new RegExp("["+tonesLetters.map(T=>precomposed_accented_all[T+v]).join("|")+"]","i");
+}
 
-var deAccentFull = new RegExp("["+Object.values(precomposed_accented).join("|")+"]","g");
+
+var deAccentFull = new RegExp("["+Object.values(precomposed_accented_all).join("|")+"]","g");
 var vowelNormalise = new RegExp("["+Object.values(precomposed_accented).concat(unaccented).join("|")+"]","g");
 
 
@@ -112,11 +143,26 @@ function asciilitize(text){
 			
 			if(deAccentRegexpes[Tt].test(w)){
 				T = Tt;
+
+				
 				break;
 			}
 		}
 
-		w = w.replace(vowelNormalise,"a");
+		//w = w.replace(vowelNormalise,"a");
+
+		for(let v of unaccented)
+		{
+			w = w.replace(vowelNormalisers[v],v);
+		}
+
+		//remove residual accents
+		for( let d of Object.values(diacritic))
+			w = w.replace(d,"");
+
+		//Syllabics
+		w = w.replace(/(p|b|t|d|k|g|s|z|ṣh|ẓh|r)(m|r|ṇ)(p|b|t|d|k|g|s|z|ṣh|ẓh|r)/g,"$1$2§$3");
+		w = w.replace(/(p|b|t|d|k|g|s|z|ṣh|ẓh|r)(n)(p|b|k|g|s|z|ṣh|ẓh|r)/g,"$1$2§$3");
 
 		w = w.replace(/aa/g,"a");
 		
@@ -178,6 +224,26 @@ var affV = aff("t","s");
 var affP = aff("t","ʃ");
 var affR = aff("ʈ","ʂ");
 
+
+vIPA = {
+	"a":"a",
+	"e":"e",
+	"i":"i",
+	"u":"ɯ",
+	"o":"ɤ",
+	"n":"n\u0329",
+	"r":"r\u0329",
+	"ɳ":"ɳ\u0329"
+}
+
+function vowelsIPA(v){
+	if(v in vIPA)
+		return vIPA[v];
+	else
+		return "ERR"+v;
+
+}
+
 function toIPA(text){
 	
 
@@ -213,20 +279,17 @@ function toIPA(text){
 				.replace(/gg/g,"gː")
 				.replace(/tt/g,"tː")
 				.replace(/dd/g,"dː")
-				.replace(/!!/g,"!ː")
 				.replace(/tts/g,"tːs")
 				.replace(/ts/g,affV)
 				.replace(/pp/g,"pː")
-				.replace(/y/g,"j");
-
-
-	
+				.replace(/y/g,"j")
+				.replace(/g/g,"ɡ");
 
 	words = text.split(" ");
 
 	outwords = [];
 
-	V = ""
+	V = "ǝ"
 
 	for (let w of words){
 		let m = w.match(/^((?:H|L|R|F|P|D|J|T)?)(.*)$/);
@@ -240,7 +303,9 @@ function toIPA(text){
 		let bareword = m[2];
 		let tonification = tonify(bareword,tone);
 
-		let outsyllables = tonification.consonants.map( (s,i) => s+V+tonification.pitches[i] );
+
+
+		let outsyllables = tonification.consonants.map( (s,i) => s+vowelsIPA(tonification.vowels[i])+tonification.pitches[i] );
 
 		outwords.push(outsyllables.join("."));
 
@@ -251,6 +316,8 @@ function toIPA(text){
 	return outwords.join("  ");
 
 }
+
+console.log(asciilitize("kṇ̌to-ze"),tonify("kṇ§to-ze","D"),toIPA(asciilitize("kṇ̌to-ze")));
 
 
 var vowelRE = /[a|e|o|i|u|y|à-æ|è-ö|ø-ý|ÿ|Ā-ą|Ē-ě|Ō-œ|Ũ-ų|Ŷ-Ÿ|Ǎ-ǣ]/g
@@ -263,9 +330,15 @@ function searchify(word){
 
 function tonify(word,tone){
 
-		word = word.replace(vowelNormalise,"a");
+		//word = word.replace(vowelNormalise,"a");
 
-		let syllables = word.trim().split("a").slice(0,-1);
+		let syllablePieces = word.trim().split(/(a|e|i|o|u|.§)/).slice(0,-1);
+		let syllables = syllablePieces.filter((e,i)=>i%2==0);
+		let vowels = syllablePieces.filter((e,i)=>i%2==1);
+		for (let i in vowels)
+			vowels[i] = vowels[i].replace(/§/,"");
+
+
 
 		let pitches = [...toneSequences[tone]];
 
@@ -304,7 +377,7 @@ function tonify(word,tone){
 			
 		}
 
-		return {'consonants':syllables,'pitches':pitches}
+		return {'consonants':syllables,'vowels':vowels,'pitches':pitches}
 }
 
 
@@ -317,6 +390,9 @@ function applyToneRomanise(word,tone){
 	let N = tonification.consonants.length;
 	let romanisations = tonification.pitches.map(function(p,i) {
 										let c = tonification.consonants[i];
+										if(tonification.vowels[i] != 'a')
+											return tonification.vowels[i];
+
 										if(["w","y"].includes(c))
 											return "a";
 										if((i==N-1)){
@@ -381,16 +457,6 @@ function accent(vowel,tone){
 		return precomposed_accented[tone+vowel];
 	}
 
-	diacritic = {
-		"F":"\u0300",
-		"R":"\u0301",
-		"D":"\u0306",
-		"P":"\u0302",
-		"H":"\u0304",
-		"L":"\u0307",
-		"T":"\u030f",
-		"J":"\u0303"
-	}
 
 	return vowel + diacritic[tone];
 
