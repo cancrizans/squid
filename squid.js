@@ -1,8 +1,11 @@
 
 
-var tH = "˦";
-var tL = "˨";
-var tM = "˧";
+var tH = "\u0301";
+var tL = "\u0300";
+var tM = "\u0304";
+
+var tHM = "\u1dc7";
+var tLM = "\u1dc5";
 
 var matchL = new RegExp(tL);
 var matchMH = new RegExp(tM+"|"+tH);
@@ -19,6 +22,11 @@ var toneSequences = {
 	'D': tH+tL+tM,
 	'T': tH+tL+tM+tL,
 	'J': tL+tH+tM+tH
+}
+
+function mergeTones(text){
+	return text.replace(tH+tM, tHM)
+				.replace(tL+tM, tLM);
 }
 
 var tonesLetters = Object.keys(toneSequences);
@@ -92,13 +100,16 @@ var	diacritic = {
 
 console.log(diacritic.D);
 
-var precomposed_syllabic = {}
-
-for(let s of ["m","n","ṇ","r"]){
-	for (let T of tonesLetters){
-		precomposed_syllabic[T+s] = s+diacritic[T];
-	}
+var precomposed_syllabic = {
+	"Hr":"r̄"
 }
+
+// for(let s of ["m","n","ṇ","r"]){
+// 	for (let T of tonesLetters){
+// 		if(!((T+s) in precomposed_syllabic) )
+// 			precomposed_syllabic[T+s] = s+diacritic[T];
+// 	}
+// }
 
 var precomposed_accented_all = Object.assign({},precomposed_syllabic,precomposed_accented);
 
@@ -138,7 +149,7 @@ function asciilitize(text){
 		if (w=="")
 			continue;
 
-		let T = "D";
+		let T = null;
 		for (let Tt of tonesLetters){
 			
 			if(deAccentRegexpes[Tt].test(w)){
@@ -148,6 +159,18 @@ function asciilitize(text){
 				break;
 			}
 		}
+
+		if(!T){
+			for (let Tt of tonesLetters){
+				if(w.includes(diacritic[Tt])){
+					T = Tt;
+					w.replace(diacritic[Tt],"");
+					break;
+				}
+			}
+		}
+		if(!T)
+			T = "D";
 
 		//w = w.replace(vowelNormalise,"a");
 
@@ -161,8 +184,9 @@ function asciilitize(text){
 			w = w.replace(d,"");
 
 		//Syllabics
-		w = w.replace(/(p|b|t|d|k|g|s|z|ṣh|ẓh|r)(m|r|ṇ)(p|b|t|d|k|g|s|z|ṣh|ẓh|r)/g,"$1$2§$3");
-		w = w.replace(/(p|b|t|d|k|g|s|z|ṣh|ẓh|r)(n)(p|b|k|g|s|z|ṣh|ẓh|r)/g,"$1$2§$3");
+		w = w.replace(/(p|b|t|d|k|g|s|z|ṣh|ẓh|m|n|ṇ|ċh|ch)(r)(p|b|t|d|k|g|s|z|ṣh|ẓh|n|ṇ|ċh|ch)/g,"$1$2§$3");
+		w = w.replace(/(p|b|t|d|k|g|s|z|ṣh|ẓh|r|ċh|ch)(ṇ)(p|b|t|d|k|g|s|z|ṣh|ẓh|r|ċh|ch)/g,"$1$2§$3");
+		w = w.replace(/(p|b|t|d|k|g|s|z|ṣh|ẓh|r|ċh|ch)(m|n)(p|b|k|g|s|z|ṣh|ẓh|r|ċh|ch)/g,"$1$2§$3");
 
 		w = w.replace(/aa/g,"a");
 		
@@ -192,7 +216,6 @@ function toScript(text){
 				.replace(/nts/g,"X")
 				.replace(/nt/g,"N")
 				.replace(/ts/g,"x")
-				.replace(/rn/g,"n.")
 				.replace(/ṇ/g,"n.")
 				.replace(/rsh/g,"s.")
 				.replace(/sh/g,"S")
@@ -230,7 +253,8 @@ vIPA = {
 	"e":"e",
 	"i":"i",
 	"u":"ɯ",
-	"o":"ɤ",
+	"o":"o",
+	"ə":"ə",
 	"n":"n\u0329",
 	"r":"r\u0329",
 	"ɳ":"ɳ\u0329"
@@ -254,8 +278,6 @@ function toIPA(text){
 				.replace(/nny/g,"ɲː")
 				.replace(/nn/g,"nː")
 				.replace(/ny/g,"ɲ")
-				.replace(/rnn/g,"ɳː")
-				.replace(/rn/g,"ɳ")
 				.replace(/ṇṇ/g,"ɳː")
 				.replace(/ṇ/g,"ɳ")
 				.replace(/rr/g,"rː")
@@ -308,17 +330,17 @@ function toIPA(text){
 
 		let outsyllables = tonification.consonants.map( (s,i) => s+vowelsIPA(tonification.vowels[i])+tonification.pitches[i] );
 
-		outwords.push(outsyllables.join("."));
+		outwords.push(outsyllables.join(""));
 
 	}
 
 
 
-	return outwords.join("  ");
+	return mergeTones(outwords.join("  "));
 
 }
 
-console.log(asciilitize("kṇ̌to-ze"),tonify("kṇ§to-ze","D"),toIPA(asciilitize("kṇ̌to-ze")));
+//console.log(asciilitize("kr̄ṣhe"),asciilitize("kr̄ṣhe"),tonify("kr̄ṣhe","H"),toIPA(asciilitize("kr̄ṣhe")));
 
 
 var vowelRE = /[a|e|o|i|u|y|à-æ|è-ö|ø-ý|ÿ|Ā-ą|Ē-ě|Ō-œ|Ũ-ų|Ŷ-Ÿ|Ǎ-ǣ]/g
@@ -331,9 +353,10 @@ function searchify(word){
 
 function tonify(word,tone){
 
-		//word = word.replace(vowelNormalise,"a");
+		
+		word = word.replace(/(a|e|i|o|u)(a|e|i|o|u)/g,"$1");
 
-		let syllablePieces = word.trim().split(/(a|e|i|o|u|.§)/).slice(0,-1);
+		let syllablePieces = word.trim().split(/(a|ə|e|i|o|u|.§)/).slice(0,-1);
 		let syllables = syllablePieces.filter((e,i)=>i%2==0);
 		let vowels = syllablePieces.filter((e,i)=>i%2==1);
 		for (let i in vowels)
@@ -360,7 +383,7 @@ function tonify(word,tone){
 
 			if(pitches.length == 2)
 			{
-				pitches.splice(1,0,'˧');
+				pitches.splice(1,0,tM);
 			}
 		}
 
@@ -419,7 +442,6 @@ function applyToneRomanise(word,tone){
 
 function compactRomanise(text){
 	text = text.replace(/rs/g,"ṣh")
-				.replace(/rn/g,"ṇ")
 				.replace(/rz/g,"ẓh");
 	return text;
 }
