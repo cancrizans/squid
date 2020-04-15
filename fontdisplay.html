@@ -13,20 +13,32 @@
 
 	<h2>Table of kerning, alternates and ligatures</h2>
 
+	<h3>All digraphs</h3>
+
 	<table id="digraphtable" class="squidfont" style="font-size: 2.4em"></table>
+
+	<h3>"r" and "ṇ" variants on the left</h3>
+	<table id="trigraphtable" class="squidfont" style="font-size: 2.4em"></table>
 
 	<script type="text/javascript" src="scripts/jquery-3.4.1.slim.min.js"></script>
 	<script type="text/javascript">
 		
-		var letters = ["'","b","x","e","c","X","E","C","d","g","h","k","k.","m","n","n.","nj","N","p","p.","r","s","s.","S","t","t.","w","y","z","Z","z."]
-		var lettersonlybefore = ["br","yr","sr"];	
+		var letters = ["'","b","x","e","c","X","E","C","d","g","h","k","k.","m","n","n.","nj","N","O","Q","p","p.","r","s","s.","S","t","t.","w","y","z","Z","z."]
+		var lettersonlybefore = ["hr","yr","sr","hn.","yn.","sn."];	
 
 		var tab = $("#digraphtable");
+		var tab2 = $("#trigraphtable");
 
-		letters.concat(lettersonlybefore).forEach(function(l){
+		letters.forEach(function(l){
 			let tr = $("<tr></tr>");
 			tr.html(letters.map(k=>`<td>${l}${k}</td>`).join(""));
 			tr.appendTo(tab);
+		});
+
+		lettersonlybefore.forEach(function(l){
+			let tr = $("<tr></tr>");
+			tr.html(letters.map(k=>`<td>${l}${k}</td>`).join(""));
+			tr.appendTo(tab2);
 		});
 
 		for(let w of ["400","700"]){
