@@ -211,6 +211,7 @@ function toScript(text){
 				.replace(/ts/g,"x")
 				.replace(/tt/g,"t.")
 				.replace(/kk/g,"k.")
+				.replace(/pp/g,"p.")
 				.replace(/gg/g,"g.")
 				.replace(/ny/g,"nj")
 				.replace(/nts/g,"X")
@@ -230,10 +231,10 @@ function toScript(text){
 
 	
 
-	text = text.replace(/\b([P|D|R|F|T|J|H|L])a/g,"$1'")
+	text = text.replace(/\b([P|D|R|F|T|J|H|L]?)a/g,"$1'")
 				.replace(/a/g,"");
 
-	text = text.replace(/\btt/g,"t.")
+	text = text.replace(/\b([P|D|R|F|T|J|H|L]?)tt/g,"$1t.")
 				.replace(/§/g,"");
 	
 
@@ -343,7 +344,7 @@ function toIPA(text){
 }
 
 //console.log(asciilitize("kr̄ṣhe"),asciilitize("kr̄ṣhe"),tonify("kr̄ṣhe","H"),toIPA(asciilitize("kr̄ṣhe")));
-console.log(asciilitize("chřsottse"),toScript(asciilitize("chřsottse")));
+console.log(asciilitize("tatakaṇa"),toScript(asciilitize("tatakaṇa")));
 
 
 var vowelRE = /[a|e|o|i|u|y|à-æ|è-ö|ø-ý|ÿ|Ā-ą|Ē-ě|Ō-œ|Ũ-ų|Ŷ-Ÿ|Ǎ-ǣ]/g

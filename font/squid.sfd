@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1582197146
-ModificationTime: 1587136395
+ModificationTime: 1587136528
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -1082,9 +1082,9 @@ StartChar: L
 Encoding: 76 76 42
 Width: 0
 VWidth: 0
-Flags: HW
-HStem: 248 244<342.92 515.08>
-VStem: 275 308<309.442 430.558>
+Flags: W
+HStem: 682 62<191.905 272.095>
+VStem: 190 84<686.133 739.867>
 LayerCount: 2
 Fore
 SplineSet
