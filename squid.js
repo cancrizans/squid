@@ -1,5 +1,3 @@
-
-
 var tH = "\u0301";
 var tL = "\u0300";
 var tM = "\u0304";
@@ -206,9 +204,11 @@ var tonesPattern = "([P|D|R|F|T|J|H|L])";
 
 //following will turn clean-vowel into script text
 function toScript(text){
-	text = text.replace(".","-");
 
-	text = text.replace(/tts/g,"x.")
+	text = text.replace("-","").replace(".","-").replace(vowelNormalise,"a");
+
+	text = text.replace(/tts/g,"X")
+				.replace(/ts/g,"x")
 				.replace(/tt/g,"t.")
 				.replace(/kk/g,"k.")
 				.replace(/gg/g,"g.")
@@ -217,22 +217,24 @@ function toScript(text){
 				.replace(/nt/g,"N")
 				.replace(/ts/g,"x")
 				.replace(/ṇ/g,"n.")
-				.replace(/rsh/g,"s.")
 				.replace(/sh/g,"S")
 				.replace(/ṣh/g,"s.")
-				.replace(/rzh/g,"z.")
 				.replace(/zh/g,"Z")
 				.replace(/ẓh/g,"z.")
-				.replace(/f/g,"h");
-
+				.replace(/f/g,"h")
+				.replace(/ċċh/g,"E")
+				.replace(/ċh/g,"e")
+				.replace(/cch/g,"C")
+				.replace(/ch/g,"c");
+				
 
 	
 
-	text = text.replace(vowelNormalise,"a")
-				.replace(/ ?([P|D|R|F|T|J|H|L])a/g,"$1'")
-				.replace(/ ?([P|D|R|F|T|J|H|L])/g,"$1")
+	text = text.replace(/\b([P|D|R|F|T|J|H|L])a/g,"$1'")
 				.replace(/a/g,"");
 
+	text = text.replace(/\btt/g,"t.")
+				.replace(/§/g,"");
 	
 
 	return text;
@@ -341,6 +343,7 @@ function toIPA(text){
 }
 
 //console.log(asciilitize("kr̄ṣhe"),asciilitize("kr̄ṣhe"),tonify("kr̄ṣhe","H"),toIPA(asciilitize("kr̄ṣhe")));
+console.log(asciilitize("chřsottse"),toScript(asciilitize("chřsottse")));
 
 
 var vowelRE = /[a|e|o|i|u|y|à-æ|è-ö|ø-ý|ÿ|Ā-ą|Ē-ě|Ō-œ|Ũ-ų|Ŷ-Ÿ|Ǎ-ǣ]/g
@@ -350,6 +353,10 @@ function searchify(word){
 				.replace(/aa/g,"a");
 }
 
+function toRoot(word){
+
+	return searchify(word).replace(/a/g,".");
+}
 
 function tonify(word,tone){
 
