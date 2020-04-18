@@ -96,10 +96,13 @@ var	diacritic = {
 		"J":"\u0303"
 	}
 
-console.log(diacritic.D);
+//console.log(diacritic.D);
 
 var precomposed_syllabic = {
-	"Hr":"r̄"
+	"Rr":"ŕ",
+	"Rm":"ḿ",
+	"Lm":"ṁ",
+	"Rn":"ń"
 }
 
 // for(let s of ["m","n","ṇ","r"]){
@@ -111,22 +114,26 @@ var precomposed_syllabic = {
 
 var precomposed_accented_all = Object.assign({},precomposed_syllabic,precomposed_accented);
 
-console.log(precomposed_accented_all);
 
 var unaccented = ["a","e","i","o","u"];
+
+var unaccented_all = unaccented.concat(["m","n","ṇ","r"])
 
 var deAccentRegexpes = {};
 
 for (let T of tonesLetters){
-	deAccentRegexpes[T] = new RegExp("["+unaccented.map(v=>precomposed_accented_all[T+v]).join("|")+"]", "i" );
+	deAccentRegexpes[T] = new RegExp("["+unaccented_all.map(v=>precomposed_accented_all[T+v]).filter(x=>x).join("|")+"]", "i" );
 }
 
 
 var vowelNormalisers = {}
-for(let v of unaccented){
-	vowelNormalisers[v] = new RegExp("["+tonesLetters.map(T=>precomposed_accented_all[T+v]).join("|")+"]","i");
+for(let v of unaccented_all){
+	if(v == "ṇ")
+		continue;
+	vowelNormalisers[v] = new RegExp("["+tonesLetters.map(T=>precomposed_accented_all[T+v]).filter(x=>x).join("|")+"]","i");
 }
 
+//console.log(vowelNormalisers);
 
 var deAccentFull = new RegExp("["+Object.values(precomposed_accented_all).join("|")+"]","g");
 var vowelNormalise = new RegExp("["+Object.values(precomposed_accented).concat(unaccented).join("|")+"]","g");
@@ -137,7 +144,7 @@ var punctuation = /[\?|,|\.|!]/g;
 
 
 //following will turn any text with diacritics and tone marks into clean-vowel romanisation
-function asciilitize(text){
+function asciilitize(text, verbose = false){
 	let words = text.trim().replace(punctuation,"").split(" ");
 	let outwords = [];
 	for (let ww of words){
@@ -153,6 +160,8 @@ function asciilitize(text){
 			if(deAccentRegexpes[Tt].test(w)){
 				T = Tt;
 
+				if(verbose)
+					console.log("matched "+Tt+" with "+deAccentRegexpes[Tt]+" on "+w);
 				
 				break;
 			}
@@ -172,7 +181,7 @@ function asciilitize(text){
 
 		//w = w.replace(vowelNormalise,"a");
 
-		for(let v of unaccented)
+		for(let v of unaccented_all)
 		{
 			w = w.replace(vowelNormalisers[v],v);
 		}
@@ -205,7 +214,7 @@ var tonesPattern = "([P|D|R|F|T|J|H|L])";
 //following will turn clean-vowel into script text
 function toScript(text){
 
-	text = text.replace("-","").replace(".","-").replace(vowelNormalise,"a");
+	text = text.replace("-","").replace(".","-").replace(vowelNormalise,"a").replace(/\b([P|D|R|F|T|J|H|L]?)a/g,"$1'").replace(/\b([P|D|R|F|T|J|H|L]?)tat/g,"$1t.");
 
 	text = text.replace(/tts/g,"X")
 				.replace(/ts/g,"x")
@@ -231,11 +240,7 @@ function toScript(text){
 
 	
 
-	text = text.replace(/\b([P|D|R|F|T|J|H|L]?)a/g,"$1'")
-				.replace(/a/g,"");
-
-	text = text.replace(/\b([P|D|R|F|T|J|H|L]?)tt/g,"$1t.")
-				.replace(/§/g,"");
+	text = text.replace(/a/g,"").replace(/§/g,"");
 	
 
 	return text;
@@ -309,7 +314,8 @@ function toIPA(text){
 				.replace(/ts/g,affV)
 				.replace(/pp/g,"pː")
 				.replace(/y/g,"j")
-				.replace(/g/g,"ɡ");
+				.replace(/g/g,"ɡ")
+				.replace(/w/g,"ɻʷ");
 
 	words = text.split(" ");
 
@@ -344,7 +350,8 @@ function toIPA(text){
 }
 
 //console.log(asciilitize("kr̄ṣhe"),asciilitize("kr̄ṣhe"),tonify("kr̄ṣhe","H"),toIPA(asciilitize("kr̄ṣhe")));
-console.log(asciilitize("tatakaṇa"),toScript(asciilitize("tatakaṇa")));
+let testword = "óċhekrna"
+console.log(asciilitize(testword,true),toScript(asciilitize(testword)));
 
 
 var vowelRE = /[a|e|o|i|u|y|à-æ|è-ö|ø-ý|ÿ|Ā-ą|Ē-ě|Ō-œ|Ũ-ų|Ŷ-Ÿ|Ǎ-ǣ]/g

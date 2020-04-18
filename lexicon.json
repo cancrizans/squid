@@ -34,11 +34,24 @@
 		"pr":["M","MASS"],
 		"tr":"surprise"
 	},
-	"ṣhayakasa":{
-		"cl":"n",
-		"pr":["M","SING"],
-		"tr":"a sleep, a nap"
-	},
+	"ṣhayakasa":[
+		{
+			"cl":"n",
+			"pr":["M","SING"],
+			"tr":"a sleep, a nap"
+		},
+		{
+			"cl":"v",
+			"pr":["INTR"],
+			"tr":"to sleep"
+		},
+		{
+			"cl":"v",
+			"pr":["SHIFT-TR"],
+			"tr":"to dream of"
+		}
+
+	]	,
 	"fatsaṇa":{
 		"cl":"v",
 		"pr":["TR"],
@@ -150,11 +163,20 @@
 		"tr":"woman, especially older"
 	},
 
-	"tanaba":{
+	"tanaba":[
+		{
 		"cl":"n",
 		"pr":["F","COLL"],
 		"tr":"fishes"
 	},
+	{
+		
+		"cl":"v",
+		"pr":["INTR"],
+		"tr":"to swim"
+	
+	}
+	],
 
 	"gaċċhapa":{
 		"cl":"n",
@@ -168,11 +190,19 @@
 		"tr":"to bake"
 	},
 
-	"yarada":{
-		"cl":"v",
-		"pr":["INTR"],
-		"tr":"to smile"
-	},
+	"yarada":[
+		{
+			"cl":"v",
+			"pr":["INTR"],
+			"tr":"to smile"
+		},
+		{
+			"cl":"n",
+			"pr":["F","SING"],
+			"tr":"a smile"
+		}
+	],
+	
 
 	"kataba":{
 		"cl":"n",
@@ -288,10 +318,74 @@
 		"tr":"mountains"
 	},
 
+	"ċhara":{
+		"cl":"n",
+		"pr":["M","SING"],
+		"tr":"mouth"
+	},
+
+	"makara":[
+		{
+		"cl":"n",
+		"pr":["F","SING"],
+		"tr":"liver"
+		},
+		{
+		"cl":"adj",
+		"pr":[],
+		"tr":"bitter (of taste)"
+		}
+	],
+
+	"paccha":[
+		{
+			"cl":"n",
+			"pr":["M","MASS"],
+			"tr":"spit (liquid)"
+		},
+		{
+			"cl":"v",
+			"pr":["TR"],
+			"tr":"to spit out, (ANTIP: to spit)"
+		}
+	],
+
 	"pappaka":{
 		"cl":"n",
 		"pr":["M","COLL"],
 		"tr":"wolves"
-	}
+	},
+
+	"karaṣha":[
+		{
+			"cl":"n",
+			"pr":["F","COLL"],
+			"tr":"clothes, articles of clothing"
+		},
+		{
+			"cl":"v",
+			"pr":["SHIFT-TR"],
+			"tr":"to wear"
+		}
+	],
+
+	"satta":[
+		{
+			"cl":"n",
+			"pr":["M","COLL"],
+			"tr":["utterances, phrases, spoken word", "language, way of speaking"]
+		},
+		{
+			"cl":"n",
+			"pr":["F","SING"],
+			"tr":["a spoken opinion or reported thought, something said"]
+		},
+		{
+			"cl":"v",
+			"pr":["TR"],
+			"tr":"to speak (a language), to say, to claim"
+		}
+
+	]
 
 }
