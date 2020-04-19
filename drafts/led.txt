@@ -1,0 +1,135 @@
+**Naderian** is one of the conlangs I developed for a sci-fi webcomic I make which for the sake of avoid self-promotion I won't give the name of. But the relevant bits of lore is that Earth has become a colony for an alien empire, enslaved humans, and brought over slaves of many different alien species. Three centuries later, it's now a "post-"colonial melting pot of scrambled cultures, unified under the lingua franca of the oppressors, Reticulan (which is rendered in-comic as English). The only group that doesn't conform are the very humanoid amphibious **Naderians**, or **Squid People** unofficially, which stubbornly keep on speaking their own language.
+
+This language starts out in an initial underwater stage where most information was essentially carried in vowel tone and length. Then, after they move to the surface the extremely complex vowel system starts simplifying and a consonantal inventory develops. What we get to see on colonial Earth is the strange outcome of the evolution of this odd proto-language as it tentatively transitions into a more familiar terrestrial language.
+
+Because of physiological hearing restrictions and the heritage of the water-bound stage, Naderians essentially do not distinguish vowel quality. The language is strongly tonal to compensate, with a system that could neither be classified as contour or register. Basically, consonantal roots can
+
+
+## Phono-stuff
+
+These are the consonants:
+
+||Lab.|Alv.|Postalv.|Palat.|Retro|Velar|
+:--|:-:|:-:|:-:|:-:|:-:|:-:|
+|Stop|p b pː|t d tː ⁿt||||k ɡ kː|
+|Nasal|m|n||ɲ|ɳ||
+|Affr.||t͡s tːs ⁿt͡s|t͡ʃ tːʃ ⁿt͡ʃ||ʈ͡ʂ ʈːʂ (ᶯʈ͡ʂ)||
+|Fric.|(ɸ)|s z|ʃ ʒ||ʂ ʐ|x|
+|Appr.|ɻʷ|||j|ɻʷ||
+|Trill||r|||||
+
+Can't show it with reddit, but basically the alveolar stops have allophones all over to palatal and retroflex depending on context, and the postalv affricates can palatalise. [ɸ]~[x] are complementary allophones of the same phoneme /x/ (written <f>, <h>), kind of like Japanese. It also simplifies phonotactics if you add a formall null consonant phoneme /∅/ that can only occur word-initially.
+
+Then you have eight tonemes, which are the phonemically distinct **word-level** tone melodies, composed of a specific sequence of High, Mid, Low tones (which themselves aren't really phonemic as they can only appear in the order specified by the melodies):
+
+|Tone|Full Name|Pitch Sequence|Diacritic|
+:--|:-:|:-:|:-:
+|H|High|H|ā|
+|L|Low|L|ȧ|
+|R|Rising|LH|á|
+|F|Falling|HL|à|
+|D|Dip|HLM|ǎ|
+|P|Peak|LHM|â|
+|T|Tumble|HLML|ȁ|
+|J|Jump|LHMH|a̋|
+
+You romanise the tone with a diacritic on the first vowel/syllabic whose shape looks like the shape of the pitch movement - couldn't be more straightforward. (A bit odd compared to the standard accent romanisation of tones but that would be impractical to use here).
+
+And finally vowels, both their quality and their very number and presence, can be *deterministically* predicted by a word's consonant sequence and tone pattern, so that you could very much argue there are one or even zero vowel phonemes in the language. In practice, there's the sounds [a e ə i ɨ o~ɤ ɯ] that appear predictably, and in broad transcription and romanisation I use /a e i o u/ even though it is formally redundant information - it helps a lot with readability.
+
+Phonotactics is at first glance very complex - but it can be understood very simply by imagining every words starts as a sequence of CV syllables. If the word is too short - has less syllables than pitches in the tone it was assigned - some vowels will carry more pitches by becoming glides (contours) and if necessary, lengthen in a predictable way. But if the word is overlong, as it's more likely, it starts collapsing its vowels either by eliding unstressed ones as CVC > CC (if the consonants are "compatible") or a sonorant between two vowels can become syllabic: CVSVC > CSC. The result is that with ultimately very simple rules (they can be reproduced with a computer program) one can often obtain a great apparent irregularity.
+
+
+## Roots
+
+Lexical info is carried by a consonantal root of at least two consonants. Then one appends a series of also consonantal suffixes (and rare prefixes) for certain grammatical information, and finally this whole sequence counts as a "word" and you apply to that the tone pattern. The final result is that the tone melody kind of "wraps up" the whole agglutinated run and automatically acts as a word-boundary marker.
+
+Roots can have up to three valid meanings when they are inflected as a Feminine Noun, a Masculine Noun, and a Verb. Here's a rare example of a root, **t.n.b.** that has all three: verb is *to swim*, feminine noun is *fishes* (inherently plural) and masculine is *swimming* (as in the act of). By applying the tone patterns, one obtains all the various inflectional forms of these three words:
+
+|Tone|t.n.b.|Meaning|
+:-:|:-:|:--|
+|H|tn̄be|swim.IND.F.IMPERF|
+|L|tṅbo|swim.NEG.M, swimming.INSTR|
+|F|tǹbo|swim.IND.M.PERF, fishes.INSTR|
+|R|tńbe|swim.IND.F.PERF, fishes.DOM, swimming.DOM|
+|D|tǎnobe|swim.NEG.F, fishes.ABS|
+|P|tôbane|swim.IND.M.IMPERF, swimming.ABS|
+|T|tȁboneo|swim.SUBJ.PERF, swimming.TRANS|
+|J|tőbanoe|swim.SUBJ.IMPERF, fishes.TRANS|
+
+
+## OSV
+
+It has default OSV order. Instead of squeezing my brain trying to figure out where that could come from, let's just say it's aliens and consider, more interestingly, what kind of consequence it would have. One is that it's very likely to be strongly ergative (as far as I understand, because you're more likely to mark the second argument that appears in a phrase than the first), and another is the possibility of subject incorporation.
+
+
+## Ergativity
+
+Naderian has Ergative-secundative (or secondary-object) alignment, meaning that by default it marks and arranges arguments like this:
+
+he.ABS walked
+
+pie.ABS they.ERG cooked
+
+milk.INSTR child.ABS I.ERG gave
+
+There are several irregularities however that only manifest for specific verbs - independently on the arguments. For example some transitives actually act intransitive with an oblique object:
+
+dress.INSTR she.ABS wears
+
+Others, originating from a strange passive construction, are intransitive but take their sole argument in the ergative:
+
+I.ERG waited (= to.make.wait.PASS)
+
+and so are effectively Nominative-Accusative.
+
+Naderian ergativity extends far beyond just morphology. Barring some lexically-triggered exceptions, all clauses *must* have a Patient, while an Agent or Theme are optional.  
+
+
+## Case System
+
+Naderian has an underlying simple system of 4 inflectional cases that is then refined with many postpositions (actually suffixes, but beside the point), kind of like in Latin. The inflected cases are marked by word tone and are
+
+* Absolutive - patients, recipients, motion towards...
+* Dominant - Ergative + Genitive + Vocative
+* Instrumental - includes themes, instrumentals, comitatives, some static locatives, the usual stuff
+* Transitional - all things like essives, perlatives, in general encompasses all situations in which the action affects the *inside* of the noun
+
+In particular there is no need for a Dative.
+
+
+## Verbal morphology
+
+Verbs inflect with tone according to gender (of the patient), mood, and aspect (Perfective/Imperfective). So
+
+girl.F.ABS sleep.F.IND
+
+but
+
+bread.M.INSTR man.M.ABS girl.F.ERG give.M.IND
+
+Tense is communicated through adverbs in conjunction with aspectual information (i.e., a Perfective is almost always automatically in the past). There are also some agglutinating processes, for example for a 1st person Agent, or for voice shifting.
+
+
+## Gender in the first person
+
+First person pronouns inflect for gender. Again don't ask me why, ask me what happens next. How does a kid learn which pronouns they have to use for themselves just by hearing adults speak? It's quite difficult. Therefore, to correctly inflect your first pronoun is considered a mark of maturity, and the mistake is forgiven in children. (Note that in languages where some verb forms inflect for subject gender even in the first person, like those involving participles in romance languages, present a very similar challenge).
+
+
+
+## Death of the second person
+
+The most experimental feature: I have attempted to replace the 2nd person pronouns (and thus the whole concept of 2nd person, since there is no person marking on verbs) entirely with a system of "Honorifics", which boil down at the end of the day to an *open* class of effectively 2nd person pronouns that are to be used when addressing certain persons, like relatives, older, younger, with a certain degree of affection or relationship, or according to formality. These usually derive from collapsed adjectives.
+
+
+## Subject incorporation
+
+Since in a transitive clause A & V are syntactically close, and P is further away, it's not natural to have the otherwise common process of *object* noun-incorporation (I wear dresses -> I "dress-wear"), but it becomes possible to do *subject*, or better *agent* noun-incorporation. For example, you can say
+
+me.ABS ghosts.ERG haunt
+
+to mean that there are some ghosts haunting you, but if you incorporate
+
+me.ABS ghost-haunt
+
+it means you are *in general* haunted by ghosts. Naderian allows agent incorporation and routinely employs it for derivation.
