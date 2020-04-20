@@ -20,6 +20,9 @@
 	<h3>"r" and "ṇ" variants on the left</h3>
 	<table id="trigraphtable" class="squidfont" style="font-size: 2.4em"></table>
 
+	<h3>Tone diacritics</h3>
+	<table id="tonetable" class="squidfont" style="font-size: 2.4em"></table>
+
 	<script type="text/javascript" src="scripts/jquery-3.4.1.slim.min.js"></script>
 	<script type="text/javascript">
 		
@@ -28,6 +31,7 @@
 
 		var tab = $("#digraphtable");
 		var tab2 = $("#trigraphtable");
+		var tab3 = $("#tonetable");
 
 		letters.forEach(function(l){
 			let tr = $("<tr></tr>");
@@ -41,12 +45,29 @@
 			tr.appendTo(tab2);
 		});
 
+		var	diacritic = {
+			"F":"\u0300",
+			"R":"\u0301",
+			"D":"\u030C",
+			"P":"\u0302",
+			"H":"\u0304",
+			"L":"\u0307",
+			"T":"\u030f",
+			"J":"\u030B"
+		}
+
+		Object.values(diacritic).forEach(function(d){
+			let tr = $("<tr></tr>");
+			tr.html(letters.concat(["tr","dr","ð"]).map(k=>`<td>${k}${d}</td>`).join(""));
+			tr.appendTo(tab3);
+		});
+
 		for(let w of ["400","700"]){
 			let bd = $('<div style="margin:20px;"></div>');
 			bd.appendTo($("#pointsizetest"));
 			for(let i = 80; i>12; i-=4){
 
-				let div = $(`<div class="squidfont" style="font-size: ${i}px; font-weight:${w}; text-align:center">htm: bN ndrx tphs</div>`);
+				let div = $(`<div class="squidfont" style="font-size: ${i}px; font-weight:${w}; text-align:center">ȟtm: b̋N ńdrx t̂phs</div>`);
 				bd.append(div);
 			}
 		}

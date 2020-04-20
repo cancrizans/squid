@@ -93,7 +93,7 @@ var	diacritic = {
 		"H":"\u0304",
 		"L":"\u0307",
 		"T":"\u030f",
-		"J":"\u0303"
+		"J":"\u030B"
 	}
 
 //console.log(diacritic.D);
@@ -211,19 +211,24 @@ function asciilitize(text, verbose = false){
 var tonesPattern = "([P|D|R|F|T|J|H|L])";
 
 
-//following will turn clean-vowel into script text
-function toScript(text){
 
-	text = text.replace("-","").replace(".","-").replace(vowelNormalise,"a").replace(/\b([P|D|R|F|T|J|H|L]?)a/g,"$1'").replace(/\b([P|D|R|F|T|J|H|L]?)tat/g,"$1t.");
+//following will turn clean-vowel into script text
+function toScript(text,verbose=false){
+
+	text = text.replace(/-/g,"").replace(".","-").replace(vowelNormalise,"a");
+
+	if(verbose)
+		console.log(text);
+
+	text = text.replace(/(?<=[\s,.:;"']|^)([PDRFTJHL]?)a/g,"$1'").replace(/(?<=[\s,.:;"']|^)([PDRFTJHL]?)tat/g,"$1t.");
 
 	text = text.replace(/tts/g,"X")
-				.replace(/ts/g,"x")
+				.replace(/nts/g,"Q")
 				.replace(/tt/g,"t.")
 				.replace(/kk/g,"k.")
 				.replace(/pp/g,"p.")
 				.replace(/gg/g,"g.")
 				.replace(/ny/g,"nj")
-				.replace(/nts/g,"X")
 				.replace(/nt/g,"N")
 				.replace(/ts/g,"x")
 				.replace(/ṇ/g,"n.")
@@ -242,6 +247,14 @@ function toScript(text){
 
 	text = text.replace(/a/g,"").replace(/§/g,"");
 	
+	//shift tone letter forward
+	text = text.replace(/([PDRFTJHL])(.[\.j]?)/g,"$2$1");
+
+	//replace tone letter with diacs
+	for(let T of tonesLetters){
+		//console.log(T);
+		text = text.replace(T,diacritic[T]);
+	}
 
 	return text;
 
@@ -315,7 +328,8 @@ function toIPA(text){
 				.replace(/pp/g,"pː")
 				.replace(/y/g,"j")
 				.replace(/g/g,"ɡ")
-				.replace(/w/g,"ɻʷ");
+				.replace(/w/g,"ɻʷ")
+				.replace(/h/g,"x");
 
 	words = text.split(" ");
 
@@ -350,8 +364,8 @@ function toIPA(text){
 }
 
 //console.log(asciilitize("kr̄ṣhe"),asciilitize("kr̄ṣhe"),tonify("kr̄ṣhe","H"),toIPA(asciilitize("kr̄ṣhe")));
-let testword = "óċhekrna"
-console.log(asciilitize(testword,true),toScript(asciilitize(testword)));
+let testword = "ṇóṇecchi"
+console.log(asciilitize(testword,true),toScript(asciilitize(testword),true));
 
 
 var vowelRE = /[a|e|o|i|u|y|à-æ|è-ö|ø-ý|ÿ|Ā-ą|Ē-ě|Ō-œ|Ũ-ų|Ŷ-Ÿ|Ǎ-ǣ]/g
