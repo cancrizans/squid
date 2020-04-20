@@ -262,6 +262,10 @@ li {
 	
 }
 
+.example_conscript{
+	font-size: 1.7em !important;
+}
+
 .glosscell {
 	font-size: 0.9em;
 }
