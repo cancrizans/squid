@@ -220,7 +220,7 @@ function toScript(text,verbose=false){
 	if(verbose)
 		console.log(text);
 
-	text = text.replace(/(?<=[\s,.:;"']|^)([PDRFTJHL]?)a/g,"$1'").replace(/(?<=[\s,.:;"']|^)([PDRFTJHL]?)tat/g,"$1t.");
+	text = text.replace(/([\s,.:;"']|^)([PDRFTJHL]?)a/g,"$2'").replace(/([\s,.:;"']|^)([PDRFTJHL]?)tat/g,"$2t.");
 
 	text = text.replace(/tts/g,"X")
 				.replace(/nts/g,"Q")
