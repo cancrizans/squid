@@ -276,9 +276,13 @@ vIPA = {
 	"u":"ɯ",
 	"o":"o",
 	"ə":"ə",
+	"ɑ":"ɑ",
+	"ɯ":"ɯ",
+	"ɨ":"ɨ",
 	"n":"n\u0329",
 	"r":"r\u0329",
-	"ɳ":"ɳ\u0329"
+	"ɳ":"ɳ\u0329",
+	"ɲ":"ɲ\u0329"
 }
 
 function vowelsIPA(v){
@@ -364,9 +368,10 @@ function toIPA(text){
 }
 
 //console.log(asciilitize("kr̄ṣhe"),asciilitize("kr̄ṣhe"),tonify("kr̄ṣhe","H"),toIPA(asciilitize("kr̄ṣhe")));
-let testword = "ṇóṇecchi"
-console.log(asciilitize(testword,true),toScript(asciilitize(testword),true));
-
+let testword = "fantawara"
+//console.log(asciilitize(testword,true),toScript(asciilitize(testword),true));
+let testRomPrec = applyToneRomanisePrecise(testword,"F");
+console.log(testRomPrec, asciilitize(testRomPrec), applyToneRomanise(testword,"F"));
 
 var vowelRE = /[a|e|o|i|u|y|à-æ|è-ö|ø-ý|ÿ|Ā-ą|Ē-ě|Ō-œ|Ũ-ų|Ŷ-Ÿ|Ǎ-ǣ]/g
 
@@ -385,7 +390,7 @@ function tonify(word,tone){
 		
 		word = word.replace(/(a|e|i|o|u)(a|e|i|o|u)/g,"$1");
 
-		let syllablePieces = word.trim().split(/(a|ə|e|i|o|u|.§)/).slice(0,-1);
+		let syllablePieces = word.trim().split(/(a|ə|e|i|o|u|ɨ|ə|ɑ|ɯ|.§)/).slice(0,-1);
 		let syllables = syllablePieces.filter((e,i)=>i%2==0);
 		let vowels = syllablePieces.filter((e,i)=>i%2==1);
 		for (let i in vowels)
@@ -394,6 +399,49 @@ function tonify(word,tone){
 
 
 		let pitches = [...toneSequences[tone]];
+
+
+		// attempt syllable elision with overlong
+
+
+		//syllabification
+		let elisionIndex = 0;
+		while(syllables.length > pitches.length){
+			elisionIndex += 1;
+
+			if(elisionIndex >= syllables.length-1)
+				break;
+
+			let tSyl = syllables[elisionIndex];
+			let pSyl = syllables[elisionIndex-1];
+			let nSyl = syllables[elisionIndex+1];
+
+			if(["m","n","ṇ","r","ny"].includes(tSyl )){
+
+				if((tSyl == "n") && (nSyl[0] == "n")){
+					continue;
+				}
+
+				if((tSyl == pSyl) || (tSyl == nSyl)){
+					continue;
+				}
+
+				//elide
+				syllables.splice(elisionIndex,1);
+				vowels[elisionIndex-1] = tSyl;
+				vowels.splice(elisionIndex,1);
+
+				elisionIndex = 0;
+				continue;
+			}
+
+			
+		}
+
+
+
+
+		// spread pitches to syllables
 
 		if(pitches.length > syllables.length)
 		{
@@ -436,7 +484,7 @@ function tonify(word,tone){
 
 
 
-function applyToneRomanise(word,tone){
+function applyToneRomanisePrecise(word,tone){
 	
 
 	let tonification = tonify(word,tone);
@@ -450,16 +498,16 @@ function applyToneRomanise(word,tone){
 											return "a";
 										if((i==N-1)){
 											if ("r" == c)
-												return "u";
+												return "ɯ";
 										}
-										if(["sh","ch"].includes(c)){
-											return p.replace(matchMH,"i").replace(matchL,"e");
+										if(["sh","zh","ch"].includes(c)){
+											return  p.replace(matchMH,"i").replace(matchL,"ɨ");
 										}
-										if(["ṣh","ẓh"].includes(c)){
-											return p.replace(matchM,"e").replace(matchL,"o").replace(matchH,"e");
+										if(["ṣh","ẓh","ċh","ċċh","h"].includes(c)){
+											return p.replace(matchM,"o").replace(matchL,"ɯ").replace(matchH,"ɑ");
 										}
 
-										return p.replace(matchM,"e").replace(matchL,"o").replace(matchH,"a");
+										return p.replace(matchM,"ə").replace(matchL,"o").replace(matchH,"a");
 									}
 
 		);
@@ -467,6 +515,10 @@ function applyToneRomanise(word,tone){
 	romanisations[0] = accent(romanisations[0],tone);
 	
 	return tonification.consonants.map((c,i) => c + romanisations[i]).join("");
+}
+
+function applyToneRomanise(word,tone){
+	return applyToneRomanisePrecise(word,tone).replace(/ə/g,"e").replace(/ɯ/g,"u").replace(/ɨ/g,"i").replace(/ɑ/g,"a");
 }
 
 function compactRomanise(text){

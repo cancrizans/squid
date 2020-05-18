@@ -79,7 +79,7 @@
 		"tr":"arm"
 	},
 
-	"fantawari":{
+	"fantawara":{
 		"cl":"n",
 		"pr":["M","COLL","SET"],
 		"tr":"pairs of hands"
@@ -386,6 +386,12 @@
 			"tr":"to speak (a language), to say, to claim"
 		}
 
-	]
+	],
+
+	"tatsaha":{
+		"cl":"n",
+		"pr":["F","SING"],
+		"tr":["tentacle","seven (7)"]
+	}
 
 }
