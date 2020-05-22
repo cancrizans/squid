@@ -373,3 +373,15 @@ li {
 	color: red;
 	margin-left: 1ex;
 }
+
+
+
+.conscript_table td{
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.enlarge{
+	font-size: 2em;
+}
