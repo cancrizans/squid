@@ -332,7 +332,7 @@ function toIPA(text){
 				.replace(/pp/g,"pː")
 				.replace(/y/g,"j")
 				.replace(/g/g,"ɡ")
-				.replace(/w/g,"ɻʷ")
+				.replace(/w/g,"wʵ")
 				.replace(/h/g,"x");
 
 	words = text.split(" ");
