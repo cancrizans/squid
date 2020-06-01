@@ -265,7 +265,7 @@ function aff(a,b){
 }
 
 var affV = aff("t","s");
-var affP = aff("t","ʃ");
+var affP = aff("t","ɕ");
 var affR = aff("ʈ","ʂ");
 
 
@@ -313,12 +313,12 @@ function toIPA(text){
 				.replace(/ẓh/g,"ʐ")
 				
 				.replace(/dz/g,"dz")
-				.replace(/sh/g,"ʃ")
-				.replace(/zh/g,"ʒ")
+				.replace(/sh/g,"ɕ")
+				.replace(/zh/g,"ʑ")
 				.replace(/ċċh/g,"ʈːʂ")
 				.replace(/ccz/g,"ʈːʂ")
 				.replace(/rcch/g,"ʈːʂ")
-				.replace(/cch/g,"tːʃ")
+				.replace(/cch/g,"tːɕ")
 				.replace(/ċh/g,affR)
 				.replace(/cz/g,affR)
 				.replace(/rch/g,affR)
